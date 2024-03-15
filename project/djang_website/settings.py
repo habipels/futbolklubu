@@ -59,6 +59,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'djang_website.urls'
 
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -71,7 +72,11 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
+            'libraries': {
+            'custom_tags': 'main.templatetags.custom_tags',
+            },
         },
+        
     },
 ]
 

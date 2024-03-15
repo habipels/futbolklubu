@@ -47,3 +47,14 @@ class u_13_takimi_son_karsilasma(models.Model):
     deplasman_kazanma_kaybetme = models.CharField(max_length=200,blank = True,null = True, choices=maglub_galibiyet, default='')
     deplasman_skoru = models.CharField(max_length = 200,verbose_name = "Deplasman Skoru",blank = True,null = True)
     deplasman_gol_atanlar = models.TextField(verbose_name = "Deplasman Gol Atanlar",blank = True,null = True)    
+
+class u_11_skor_sayfasi(models.Model):
+    url_bilgisi = models.CharField(max_length = 400,verbose_name = "u - 11 tff sayfa linki")
+
+
+class u_12_skor_sayfasi(models.Model):
+    url_bilgisi = models.CharField(max_length = 400,verbose_name = "u - 12 tff sayfa linki")
+
+
+class u_13_skor_sayfasi(models.Model):
+    url_bilgisi = models.CharField(max_length = 400,verbose_name = "u - 13 tff sayfa linki")
