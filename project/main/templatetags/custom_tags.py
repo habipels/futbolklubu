@@ -87,9 +87,14 @@ def u_12_karsilasmalari():
     puan = soup.find_all("td",class_ ="font-weight-bold")
     for i in puan:
         puan_durumu.append(i.text)
-    print(puan_durumu)
-    print(takimlar)
-    print(skorlar)
+    genel  = []
+    y = 0
+    for i in range(0,len(takimlar)):
+
+        genel.append({"Takim":takimlar[i],
+                      "Galibiyet":skorlar[y],"Beraberlik":skorlar[y+1],"Malubiyet":skorlar[y+2],"Puan":puan_durumu[i]})
+        y = y+3
+    return genel
 @register.simple_tag
 def u_11():
     content={}
@@ -136,6 +141,48 @@ def u_11():
 
     return content
 @register.simple_tag
+def u_11_karsilasmalari():
+    content=[]
+    url = u_11_skor_sayfasi.objects.last().url_bilgisi
+    # URL'den HTML içeriğini çek
+    response = requests.get(url)
+    html_content = response.text
+    # BeautifulSoup ile HTML'i analiz et
+    soup = BeautifulSoup(html_content, 'html.parser')
+
+    # Örneğin tüm <p> etiketlerini alalım
+    paragraflar = soup.find('table',class_ = "table-standings-wide")
+    # Her bir paragrafı yazdıralım
+    takimlar = []
+   
+    for i,paragraf in enumerate(paragraflar):
+        html_doc  = paragraf
+        soup = BeautifulSoup(html_content, 'html.parser')
+
+        # Tablodaki her bir satırı seçelim
+        rows = soup.find_all('tr')
+
+        # Her bir satır için işlem yapalım
+    skorlar  =[]
+    puan_durumu = []
+    for row in rows:
+        if row.find("h6",class_ ="team-meta__name"):
+            takimlar.append(row.find("h6",class_ ="team-meta__name").text)
+    g_b_m = soup.find_all("td",class_ ="d-none d-xl-table-cell")
+    for i in g_b_m:
+        skorlar.append(i.text)
+    puan = soup.find_all("td",class_ ="font-weight-bold")
+    for i in puan:
+        puan_durumu.append(i.text)
+    genel  = []
+    y = 0
+    for i in range(0,len(takimlar)):
+
+        genel.append({"Takim":takimlar[i],
+                      "Galibiyet":skorlar[y],"Beraberlik":skorlar[y+1],"Malubiyet":skorlar[y+2],"Puan":puan_durumu[i]})
+        y = y+3
+    return genel
+@register.simple_tag
 def u_13():
     content={}
     url = u_13_skor_sayfasi.objects.last().url_bilgisi
@@ -180,3 +227,46 @@ def u_13():
             c = c+1
 
     return content
+
+@register.simple_tag
+def u_13_karsilasmalari():
+    content=[]
+    url = u_13_skor_sayfasi.objects.last().url_bilgisi
+    # URL'den HTML içeriğini çek
+    response = requests.get(url)
+    html_content = response.text
+    # BeautifulSoup ile HTML'i analiz et
+    soup = BeautifulSoup(html_content, 'html.parser')
+
+    # Örneğin tüm <p> etiketlerini alalım
+    paragraflar = soup.find('table',class_ = "table-standings-wide")
+    # Her bir paragrafı yazdıralım
+    takimlar = []
+   
+    for i,paragraf in enumerate(paragraflar):
+        html_doc  = paragraf
+        soup = BeautifulSoup(html_content, 'html.parser')
+
+        # Tablodaki her bir satırı seçelim
+        rows = soup.find_all('tr')
+
+        # Her bir satır için işlem yapalım
+    skorlar  =[]
+    puan_durumu = []
+    for row in rows:
+        if row.find("h6",class_ ="team-meta__name"):
+            takimlar.append(row.find("h6",class_ ="team-meta__name").text)
+    g_b_m = soup.find_all("td",class_ ="d-none d-xl-table-cell")
+    for i in g_b_m:
+        skorlar.append(i.text)
+    puan = soup.find_all("td",class_ ="font-weight-bold")
+    for i in puan:
+        puan_durumu.append(i.text)
+    genel  = []
+    y = 0
+    for i in range(0,len(takimlar)):
+
+        genel.append({"Takim":takimlar[i],
+                      "Galibiyet":skorlar[y],"Beraberlik":skorlar[y+1],"Malubiyet":skorlar[y+2],"Puan":puan_durumu[i]})
+        y = y+3
+    return genel
