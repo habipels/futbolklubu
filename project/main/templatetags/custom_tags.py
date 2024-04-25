@@ -97,7 +97,7 @@ def u_12_karsilasmalari():
     return genel
 @register.simple_tag
 def u_11():
-    content={}
+    content=[]
     url = u_11_skor_sayfasi.objects.last().url_bilgisi
     # URL'den HTML içeriğini çek
     response = requests.get(url)
@@ -126,7 +126,7 @@ def u_11():
         for i in paragraf.find_all("figure",class_ = "widget-results__team-logo"):
             a = i.find("img")
             if a:
-                x = "https://tffistanbul.org"+a["src"]
+                x = a["src"] #"https://tffistanbul.org"+
                 resim_list.append(x)   
         if  liste: 
             sozluk[f"takim"] = liste
@@ -136,9 +136,9 @@ def u_11():
             if c == j:
                 sozluk[f"tarih"] = tarihler[j]
         if  liste: 
-            content[index] = sozluk  # content sözlüğüne her bir sözlük ekleniyor
+            content.append(sozluk)  # content sözlüğüne her bir sözlük ekleniyor
             c = c+1
-
+        
     return content
 @register.simple_tag
 def u_11_karsilasmalari():
@@ -184,7 +184,7 @@ def u_11_karsilasmalari():
     return genel
 @register.simple_tag
 def u_13():
-    content={}
+    content=[]
     url = u_13_skor_sayfasi.objects.last().url_bilgisi
     # URL'den HTML içeriğini çek
     response = requests.get(url)
@@ -213,7 +213,7 @@ def u_13():
         for i in paragraf.find_all("figure",class_ = "widget-results__team-logo"):
             a = i.find("img")
             if a:
-                x = "https://tffistanbul.org"+a["src"]
+                x = a["src"] #"https://tffistanbul.org"+
                 resim_list.append(x)   
         if  liste: 
             sozluk[f"takim"] = liste
@@ -223,9 +223,9 @@ def u_13():
             if c == j:
                 sozluk[f"tarih"] = tarihler[j]
         if  liste: 
-            content[index] = sozluk  # content sözlüğüne her bir sözlük ekleniyor
+            content.append(sozluk)  # content sözlüğüne her bir sözlük ekleniyor
             c = c+1
-
+        
     return content
 
 @register.simple_tag
