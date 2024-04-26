@@ -10,8 +10,31 @@ def site_bilgileri_cek():
     sozluk["u_11_sonkarsilasma"] = u_11_takimi_son_karsilasma.objects.last()
     sozluk["u_12_sonkarsilasma"] = u_12_takimi_son_karsilasma.objects.last()
     sozluk["u_13_sonkarsilasma"] = u_13_takimi_son_karsilasma.objects.last()
+    sozluk ["hakkimizda"] = hakkimizda.objects.last()
+    sozluk["teknik_kadro_ekibi"] = teknik_kadro_ekibi.objects.all()
     return sozluk
 # Create your views here.
 def homepage(request):
     content = site_bilgileri_cek()
     return render(request,"index.html",content)
+
+def about(request):
+    content = site_bilgileri_cek()
+    return render(request,"about.html",content)
+
+def fotograflar(request):
+    content = site_bilgileri_cek()
+    content["foto"] = formalarimiz.objects.order_by("-id")
+    return render(request,"galery.html",content)
+def u_11(request):
+    content = site_bilgileri_cek()
+    content["foto"] = u_11_fotograflari.objects.order_by("-id")
+    return render(request,"galery.html",content)
+def u_12(request):
+    content = site_bilgileri_cek()
+    content["foto"] = u_12_fotograflari.objects.order_by("-id")
+    return render(request,"galery.html",content)
+def u_13(request):
+    content = site_bilgileri_cek()
+    content["foto"] = u_13_fotograflari.objects.order_by("-id")
+    return render(request,"galery.html",content)

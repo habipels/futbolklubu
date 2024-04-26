@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     "site_settings",
     "admin_paneli",
     "takim",
+    "ckeditor",
 ]
 
 AUTH_USER_MODEL = 'users.CustomUser'
@@ -115,7 +116,16 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'full',
+        'width': '100%',
 
+        'wordcount': {
+            'minCharCount': 25
+        }
+    },
+}
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'

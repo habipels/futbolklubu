@@ -39,7 +39,7 @@ def u_12():
         for i in paragraf.find_all("figure",class_ = "widget-results__team-logo"):
             a = i.find("img")
             if a:
-                x = a["src"] #"https://tffistanbul.org"+
+                x = "https://tffistanbul.org"+a["src"] #
                 resim_list.append(x)   
         if  liste: 
             sozluk[f"takim"] = liste
@@ -51,7 +51,6 @@ def u_12():
         if  liste: 
             content.append(sozluk)  # content sözlüğüne her bir sözlük ekleniyor
             c = c+1
-        
     return content
 @register.simple_tag
 def u_12_karsilasmalari():
@@ -126,7 +125,7 @@ def u_11():
         for i in paragraf.find_all("figure",class_ = "widget-results__team-logo"):
             a = i.find("img")
             if a:
-                x = a["src"] #"https://tffistanbul.org"+
+                x = "https://tffistanbul.org"+a["src"] #
                 resim_list.append(x)   
         if  liste: 
             sozluk[f"takim"] = liste
@@ -213,7 +212,7 @@ def u_13():
         for i in paragraf.find_all("figure",class_ = "widget-results__team-logo"):
             a = i.find("img")
             if a:
-                x = a["src"] #"https://tffistanbul.org"+
+                x = "https://tffistanbul.org"+a["src"] #"https://tffistanbul.org"+
                 resim_list.append(x)   
         if  liste: 
             sozluk[f"takim"] = liste

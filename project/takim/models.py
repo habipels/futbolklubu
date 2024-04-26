@@ -58,3 +58,30 @@ class u_12_skor_sayfasi(models.Model):
 
 class u_13_skor_sayfasi(models.Model):
     url_bilgisi = models.CharField(max_length = 400,verbose_name = "u - 13 tff sayfa linki")
+
+
+class teknik_kadro_ekibi(models.Model):
+    adi_soyadi = models.CharField(max_length=200,verbose_name=" Adı Soyadi",blank=True,null=True)
+    dogum_tarihi = models.CharField(max_length=200,verbose_name="Doğum Tarihi",blank=True,null=True)
+    gorevi = models.CharField(max_length=200,verbose_name="Görevi",blank=True,null=True)
+    aciklamasi = models.TextField(verbose_name="Açıklaması",blank=True)
+    fotografi = models.ImageField(upload_to='teknik_kadro/',verbose_name="Teknik Kadro")
+
+class formalarimiz(models.Model):
+    baslik = models.CharField(max_length=200,verbose_name="Baslik",blank=True,null=True)
+    aciklamasi = models.TextField(verbose_name="Formalarımız",blank=True)
+    fotografi = models.ImageField(upload_to='formalarimiz/',verbose_name="Formalarımız")
+
+class u_11_fotograflari(models.Model):
+    baslik = models.CharField(max_length=200,verbose_name="Baslik",blank=True,null=True)
+    aciklamasi = models.TextField(verbose_name="Formalarımız",blank=True)
+    fotografi = models.ImageField(upload_to='u_11/',verbose_name="Formalarımız")
+class u_12_fotograflari(models.Model):
+    baslik = models.CharField(max_length=200,verbose_name="Baslik",blank=True,null=True)
+    aciklamasi = models.TextField(verbose_name="Formalarımız",blank=True)
+    fotografi = models.ImageField(upload_to='u_12/',verbose_name="Formalarımız")
+
+class u_13_fotograflari(models.Model):
+    baslik = models.CharField(max_length=200,verbose_name="Baslik",blank=True,null=True)
+    aciklamasi = models.TextField(verbose_name="Formalarımız",blank=True)
+    fotografi = models.ImageField(upload_to='u_13/',verbose_name="Formalarımız")

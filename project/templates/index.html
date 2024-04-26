@@ -29,13 +29,15 @@
                                     <ul class="nav navbar-nav menu-bar">
                                         <li><a href="/" class=active>ANA SAYFA <span></span> <span></span>
                                             <span></span> <span></span></a></li>
-                                        <li><a href=about.html>HAKKIMIZDA <span></span> <span></span> <span></span>
+                                            
+                                        <li><a href="/about">HAKKIMIZDA <span></span> <span></span> <span></span>
                                             <span></span></a></li>
                                         <li><a>GALERİ<span></span> <span></span> <span></span> <span></span></a>
                                             <ul class=sub-menu>
-                                                <li><a href=gallerypage01.html>U-11 TAKIMIMIZ</a></li>
-                                                <li><a href=gallery02.html>U-12 TAKIMIMIZ</a></li>
-                                                <li><a href=gallery03.html>U-13 TAKIMIMIZ</a></li>
+                                                <li><a href="/galery">FORMALARIMIZ</a></li>
+                                                <li><a href="/u11galery">U-11 TAKIMIMIZ</a></li>
+                                                <li><a href="/u12galery">U-12 TAKIMIMIZ</a></li>
+                                                <li><a href="/u13galery">U-13 TAKIMIMIZ</a></li>
                                             </ul>
                                         </li>
                                         <li><a>OYUNCULARIMIZ<span></span> <span></span> <span></span> <span></span></a>
@@ -108,6 +110,57 @@
                 </a></div>
         </div>
     </section>
+    {% if u_11_sonkarsilasma %}
+    <section class=latestResult>
+            <div class=container>
+                <div class=row><h2 class=heading>SON <span>KARŞILAŞMA</span></h2>
+    
+                    <div class=latestResult-wrap><h4>U-11 LİGİ</h4>
+    
+                        <p></p></div>
+                    <div class="result clearfix">
+                        <div class=result-details>
+                            <div class=content><h4>{{u_11_sonkarsilasma.ev_sahibi_takim_adi}}</h4>
+    
+                                <p>{{u_11_sonkarsilasma.ev_sahibi_kazanma_kaybetme}}</p>
+    
+                                <p>{{u_11_sonkarsilasma.ev_sahibi_gol_atanlar |safe}}</p></div>
+                            <div class=figure>
+                                <div class=team-logo>
+                                    <div style=background:url({{u_11_sonkarsilasma.ev_sahibi_takim_logusu}}) class=teamLogoImg></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=result-count>
+                            <div class=count-number><span class=lose-team>{{u_11_sonkarsilasma.ev_sahibi_skoru}}</span> <span>-</span> <span
+                                    class=win-team>{{u_11_sonkarsilasma.deplasman_skoru}}</span></div>
+                            <div class=dateTime>
+                                <div class=dateTime-container><span class=date>{{u_11_sonkarsilasma.karsilasma_tarihi}}</span> <span
+                                        class=time></span></div>
+                                <div class=country-wrap><span class=field>{{u_11_sonkarsilasma.karsilasma_yeri}}</span> <span class=country></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=result-details>
+                            <div class="content contentresult"><h4>{{u_11_sonkarsilasma.deplasman_takim_adi}}</h4>
+    
+                                <p>{{u_11_sonkarsilasma.deplasman_kazanma_kaybetme}}</p>
+    
+                                <p>{{u_11_sonkarsilasma.deplasman_gol_atanlar}}
+                                    
+                                </p></div>
+                            <div class="figure figresult">
+                                <div class=team-logo>
+                                    <div style=background:url({{u_11_sonkarsilasma.deplasman_takim_logusu}}) class=teamLogoImg></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=center><a href=# class="btn btn-red score-btn">Skor Tablosu</a></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    {% endif %}
 {% if u_12_sonkarsilasma %}
 <section class=latestResult>
         <div class=container>
@@ -159,6 +212,57 @@
         </div>
     </section>
 {% endif %}
+{% if u_13_sonkarsilasma %}
+<section class=latestResult>
+        <div class=container>
+            <div class=row><h2 class=heading>SON <span>KARŞILAŞMA</span></h2>
+
+                <div class=latestResult-wrap><h4>U-13 LİGİ</h4>
+
+                    <p></p></div>
+                <div class="result clearfix">
+                    <div class=result-details>
+                        <div class=content><h4>{{u_13_sonkarsilasma.ev_sahibi_takim_adi}}</h4>
+
+                            <p>{{u_13_sonkarsilasma.ev_sahibi_kazanma_kaybetme}}</p>
+
+                            <p>{{u_13_sonkarsilasma.ev_sahibi_gol_atanlar |safe}}</p></div>
+                        <div class=figure>
+                            <div class=team-logo>
+                                <div style=background:url({{u_13_sonkarsilasma.ev_sahibi_takim_logusu}}) class=teamLogoImg></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=result-count>
+                        <div class=count-number><span class=lose-team>{{u_13_sonkarsilasma.ev_sahibi_skoru}}</span> <span>-</span> <span
+                                class=win-team>{{u_13_sonkarsilasma.deplasman_skoru}}</span></div>
+                        <div class=dateTime>
+                            <div class=dateTime-container><span class=date>{{u_13_sonkarsilasma.karsilasma_tarihi}}</span> <span
+                                    class=time></span></div>
+                            <div class=country-wrap><span class=field>{{u_13_sonkarsilasma.karsilasma_yeri}}</span> <span class=country></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=result-details>
+                        <div class="content contentresult"><h4>{{u_13_sonkarsilasma.deplasman_takim_adi}}</h4>
+
+                            <p>{{u_13_sonkarsilasma.deplasman_kazanma_kaybetme}}</p>
+
+                            <p>{{u_13_sonkarsilasma.deplasman_gol_atanlar}}
+                                
+                            </p></div>
+                        <div class="figure figresult">
+                            <div class=team-logo>
+                                <div style=background:url({{u_13_sonkarsilasma.deplasman_takim_logusu}}) class=teamLogoImg></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=center><a href=# class="btn btn-red score-btn">Skor Tablosu</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endif %}
 <section class=matchSchedule>
         <div class=container>
             <div class=row><h2 class=heading>U-11 <span>FİKSTÜRÜ</span></h2>
@@ -175,9 +279,10 @@
                                 
                                 <li><a href="#">
                                     <ul class="t_info match_info01 headline01 clearfix">
-                                        <li><img src="{{i.logo}}" alt=""></li>
+                                        <li><img src="{{i.logo|first}}" alt=""></li>
                                         <li>
                                             <div class="headline01 clearfix">
+                                                
                                             {% for k in i.takim %}
                                             <span>{{k}}</span>
                                             {% endfor %}
@@ -186,6 +291,7 @@
                                                 <span></span>
                                             </div>
                                         </li>
+                                        <li><img src='{{i.logo|slice:":2"|last}}' alt=""></li>
                                     </ul>
                                 </a></li>
                                 {% endfor %}
@@ -250,9 +356,10 @@
                                 
                                 <li><a href="#">
                                     <ul class="t_info match_info01 headline01 clearfix">
-                                        <li><img src="{{i.logo}}" alt=""></li>
+                                        <li><img src="{{i.logo|first}}" alt=""></li>
                                         <li>
                                             <div class="headline01 clearfix">
+                                                
                                             {% for k in i.takim %}
                                             <span>{{k}}</span>
                                             {% endfor %}
@@ -261,6 +368,7 @@
                                                 <span></span>
                                             </div>
                                         </li>
+                                        <li><img src='{{i.logo|slice:":2"|last}}' alt=""></li>
                                     </ul>
                                 </a></li>
                                 {% endfor %}
@@ -325,9 +433,10 @@
                                 
                                 <li><a href="#">
                                     <ul class="t_info match_info01 headline01 clearfix">
-                                        <li><img src="{{i.logo}}" alt=""></li>
+                                        <li><img src="{{i.logo|first}}" alt=""></li>
                                         <li>
                                             <div class="headline01 clearfix">
+                                                
                                             {% for k in i.takim %}
                                             <span>{{k}}</span>
                                             {% endfor %}
@@ -336,6 +445,7 @@
                                                 <span></span>
                                             </div>
                                         </li>
+                                        <li><img src='{{i.logo|slice:":2"|last}}' alt=""></li>
                                     </ul>
                                 </a></li>
                                 {% endfor %}
