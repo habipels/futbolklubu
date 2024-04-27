@@ -1,0 +1,106 @@
+{% extends "homebase.html" %}
+{% load custom_tags %}
+{% load static %}
+{% block header %}
+
+<header class=header-main>
+        <div class=header-upper>
+            <div class=container>
+                <div class=row>
+                    <ul>
+                        <li><a href="/">{{site_adi.site_adi_sekme_tr}}</a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="header-lower clearfix">
+            <div class=container>
+                <div class=row><h1 class=logo><a href="/"><img src="{{logo.image.url}}" alt=image></a></h1>
+
+                    <div class=menubar>
+                        <nav class=navbar>
+                            <div class=nav-wrapper>
+                                <div class=navbar-header>
+                                    <button type=button class=navbar-toggle><span class=sr-only>Toggle navigation</span>
+                                        <span class=icon-bar></span></button>
+                                </div>
+                                <div class=nav-menu>
+                                    <ul class="nav navbar-nav menu-bar">
+                                        <li><a href="/" class=active>ANA SAYFA <span></span> <span></span>
+                                            <span></span> <span></span></a></li>
+                                        <li><a href=/about>HAKKIMIZDA <span></span> <span></span> <span></span>
+                                            <span></span></a></li>
+                                        <li><a>GALERİ<span></span> <span></span> <span></span> <span></span></a>
+                                            <ul class=sub-menu>
+                                                <li><a href=gallerypage01.html>U-11 TAKIMIMIZ</a></li>
+                                                <li><a href=gallery02.html>U-12 TAKIMIMIZ</a></li>
+                                                <li><a href=gallery03.html>U-13 TAKIMIMIZ</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a>OYUNCULARIMIZ<span></span> <span></span> <span></span> <span></span></a>
+                                            <ul class=sub-menu>
+                                                <li><a href=gallerypage01.html>U-11 TAKIMIMIZ</a></li>
+                                                <li><a href=gallery02.html>U-12 TAKIMIMIZ</a></li>
+                                                <li><a href=gallery03.html>U-13 TAKIMIMIZ</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href=blog.html>TEKNİK KADROMUZ <span></span> <span></span> <span></span>
+                                            <span></span></a></li>
+                                        <li><a href=bookTicket.html>İLETİŞİM <span></span> <span></span>
+                                            <span></span> <span></span></a></li>
+                                 
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class=social><a href=https://www.facebook.com/templatespoint.net class=facebook><i
+                            class="fa fa-google"></i></a> <a href=https://twitter.com/itobuztech class=twitter><i
+                            class="fa fa-twitter"></i></a> <a href= https://www.instagram.com/bayrampasakocatepeatletik/ class=behance><i
+                            class="fa fa-instagram"></i></a></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+{% endblock header %}
+{% block slider %}
+
+<div class=innerbannerwrap>
+    <div class=innerbanner><h2 class=bannerHeadline>TEKNİK <span>KADROMUZ</span></h2></div>
+</div>
+<section class=players>
+    <div class=container>
+        <div class=row><h2 class=heading>Teknik <span>Kadro</span></h2>
+
+            <p class=headParagraph>Profesyonel Teknik Kadro Ekibimiz</p>
+
+            <div class="wrapplayer clearfix"><a class="prv prev-player"></a> <a class="nxt next-player"></a>
+                <ul class="boardmember clearfix">
+                    {% for i in teknik_kadro_ekibi %}               
+                    <li class=clearfix>
+                        <div>
+                            <div>
+                                <div class=fig01>
+                                    <div class=memberimg
+                                         style="background:url({{i.fotografi.url}}) no-repeat top center"></div>
+                                </div>
+                                <div class="bg-black01 fig02"><h6 class=paragraph02>{{i.adi_soyadi}}</h6>
+
+                                    <p class="uppercaseheading red">{{i.gorevi}}</p></div>
+                                <div class="bg-black fig02"><p>{{i.aciklamasi|safe}}</p>
+                                </div>
+                                <div class="bg-redcolor fig02"><p>{{i.dogum_tarihi}}</p></div>
+                            </div>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock slider %}

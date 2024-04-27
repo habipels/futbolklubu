@@ -85,3 +85,34 @@ class u_13_fotograflari(models.Model):
     baslik = models.CharField(max_length=200,verbose_name="Baslik",blank=True,null=True)
     aciklamasi = models.TextField(verbose_name="Formalarımız",blank=True)
     fotografi = models.ImageField(upload_to='u_13/',verbose_name="Formalarımız")
+
+class u_11_oyunculari(models.Model):
+    adi_soyadi = models.CharField(max_length=200,verbose_name="Adı Soyadı",blank=True,null=True)
+    forma_numarasi = models.CharField(max_length=200,verbose_name="Forma Numarası",blank=True,null=True)
+    boyu = models.CharField(max_length=200,verbose_name="Boyu",blank=True,null=True)
+    kilosu = models.CharField(max_length=200,verbose_name="Kilosu",blank=True,null=True)
+    dogum_tarihi = models.CharField(max_length=200,verbose_name="Doğum Tarihi",blank=True,null=True)
+    hobisi = models.TextField(verbose_name="hobisi",blank=True)
+    aciklamasi = models.TextField(verbose_name="Formalarımız",blank=True)
+    fotografi = models.ImageField(upload_to='oyunculari/',verbose_name="Formalarımız")
+
+class u_12_oyunculari(models.Model):
+    adi_soyadi = models.CharField(max_length=200,verbose_name="Adı Soyadı",blank=True,null=True)
+    forma_numarasi = models.CharField(max_length=200,verbose_name="Forma Numarası",blank=True,null=True)
+    boyu = models.CharField(max_length=200,verbose_name="Boyu",blank=True,null=True)
+    kilosu = models.CharField(max_length=200,verbose_name="Kilosu",blank=True,null=True)
+    dogum_tarihi = models.CharField(max_length=200,verbose_name="Doğum Tarihi",blank=True,null=True)
+    hobisi = models.TextField(verbose_name="hobisi",blank=True)
+    aciklamasi = models.TextField(verbose_name="Formalarımız",blank=True)
+    fotografi = models.ImageField(upload_to='oyunculari/',verbose_name="Formalarımız")
+
+
+class u_13_oyunculari(models.Model):
+    adi_soyadi = models.CharField(max_length=200,verbose_name="Adı Soyadı",blank=True,null=True)
+    forma_numarasi = models.CharField(max_length=200,verbose_name="Forma Numarası",blank=True,null=True)
+    boyu = models.CharField(max_length=200,verbose_name="Boyu",blank=True,null=True)
+    kilosu = models.CharField(max_length=200,verbose_name="Kilosu",blank=True,null=True)
+    dogum_tarihi = models.CharField(max_length=200,verbose_name="Doğum Tarihi",blank=True,null=True)
+    hobisi = models.TextField(verbose_name="hobisi",blank=True)
+    aciklamasi = models.TextField(verbose_name="Formalarımız",blank=True)
+    fotografi = models.ImageField(upload_to='oyunculari/',verbose_name="Formalarımız")

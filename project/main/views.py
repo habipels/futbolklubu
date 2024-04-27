@@ -21,6 +21,9 @@ def homepage(request):
 def about(request):
     content = site_bilgileri_cek()
     return render(request,"about.html",content)
+def teknik_kadromuz(request):
+    content = site_bilgileri_cek()
+    return render(request,"teknik_kadromuz.html",content)
 
 def fotograflar(request):
     content = site_bilgileri_cek()
