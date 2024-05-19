@@ -2,68 +2,68 @@
 {% load custom_tags %}
 {% load static %}
 {% block header %}
-
 <header class=header-main>
-        <div class=header-upper>
-            <div class=container>
-                <div class=row>
-                    <ul>
-                        <li><a href="/">{{site_adi.site_adi_sekme_tr}}</a></li>
-                        
-                    </ul>
-                </div>
+    <div class=header-upper>
+        <div class=container>
+            <div class=row>
+                <ul>
+                    <li><a href="/">{{site_adi.site_adi_sekme_tr}}</a></li>
+                    
+                </ul>
             </div>
         </div>
-        <div class="header-lower clearfix">
-            <div class=container>
-                <div class=row><h1 class=logo><a href="/"><img src="{{logo.image.url}}" alt=image></a></h1>
+    </div>
+    <div class="header-lower clearfix">
+        <div class=container>
+            <div class=row><h1 class=logo><a href="/"><img src="{{logo.image.url}}" alt=image></a></h1>
 
-                    <div class=menubar>
-                        <nav class=navbar>
-                            <div class=nav-wrapper>
-                                <div class=navbar-header>
-                                    <button type=button class=navbar-toggle><span class=sr-only>Toggle navigation</span>
-                                        <span class=icon-bar></span></button>
-                                </div>
-                                <div class=nav-menu>
-                                    <ul class="nav navbar-nav menu-bar">
-                                        <li><a href="/" class=active>ANA SAYFA <span></span> <span></span>
-                                            <span></span> <span></span></a></li>
-                                        <li><a href=/about>HAKKIMIZDA <span></span> <span></span> <span></span>
-                                            <span></span></a></li>
-                                        <li><a>GALERİ<span></span> <span></span> <span></span> <span></span></a>
-                                            <ul class=sub-menu>
-                                                <li><a href=gallerypage01.html>U-11 TAKIMIMIZ</a></li>
-                                                <li><a href=gallery02.html>U-12 TAKIMIMIZ</a></li>
-                                                <li><a href=gallery03.html>U-13 TAKIMIMIZ</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a>OYUNCULARIMIZ<span></span> <span></span> <span></span> <span></span></a>
-                                            <ul class=sub-menu>
-                                                <li><a href=gallerypage01.html>U-11 TAKIMIMIZ</a></li>
-                                                <li><a href=gallery02.html>U-12 TAKIMIMIZ</a></li>
-                                                <li><a href=gallery03.html>U-13 TAKIMIMIZ</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href=blog.html>TEKNİK KADROMUZ <span></span> <span></span> <span></span>
-                                            <span></span></a></li>
-                                        <li><a href=bookTicket.html>İLETİŞİM <span></span> <span></span>
-                                            <span></span> <span></span></a></li>
-                                 
-                                    </ul>
-                                </div>
+                <div class=menubar>
+                    <nav class=navbar>
+                        <div class=nav-wrapper>
+                            <div class=navbar-header>
+                                <button type=button class=navbar-toggle><span class=sr-only>Toggle navigation</span>
+                                    <span class=icon-bar></span></button>
                             </div>
-                        </nav>
-                    </div>
-                    <div class=social><a href=https://www.facebook.com/templatespoint.net class=facebook><i
-                            class="fa fa-google"></i></a> <a href=https://twitter.com/itobuztech class=twitter><i
-                            class="fa fa-twitter"></i></a> <a href= https://www.instagram.com/bayrampasakocatepeatletik/ class=behance><i
-                            class="fa fa-instagram"></i></a></div>
+                            <div class=nav-menu>
+                                <ul class="nav navbar-nav menu-bar">
+                                    <li><a href="/" >ANA SAYFA <span></span> <span></span>
+                                        <span></span> <span></span></a></li>
+                                        
+                                    <li><a href="/about">HAKKIMIZDA <span></span> <span></span> <span></span>
+                                        <span></span></a></li>
+                                    <li><a>GALERİ<span></span> <span></span> <span></span> <span></span></a>
+                                        <ul class=sub-menu>
+                                            <li><a href="/galery">FORMALARIMIZ</a></li>
+                                            <li><a href="/u11galery">U-11 TAKIMIMIZ</a></li>
+                                            <li><a href="/u12galery">U-12 TAKIMIMIZ</a></li>
+                                            <li><a href="/u13galery">U-13 TAKIMIMIZ</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class=active>OYUNCULARIMIZ<span></span> <span></span> <span></span> <span></span></a>
+                                        <ul class=sub-menu>
+                                            <li><a href="/u11player">U-11 TAKIMIMIZ</a></li>
+                                            <li><a href="/u12player">U-12 TAKIMIMIZ</a></li>
+                                            <li><a href="/u13player">U-13 TAKIMIMIZ</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="/ourtechnicalstaff">TEKNİK KADROMUZ <span></span> <span></span> <span></span>
+                                        <span></span></a></li>
+                                    <li><a href="/contact">İLETİŞİM <span></span> <span></span>
+                                        <span></span> <span></span></a></li>
+                             
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
                 </div>
+                <div class=social><a href=https://www.facebook.com/templatespoint.net class=facebook><i
+                        class="fa fa-google"></i></a> <a href=https://twitter.com/itobuztech class=twitter><i
+                        class="fa fa-twitter"></i></a> <a href= https://www.instagram.com/bayrampasakocatepeatletik/ class=behance><i
+                        class="fa fa-instagram"></i></a></div>
             </div>
         </div>
-    </header>
-
+    </div>
+</header>
 {% endblock header %}
 {% block slider %}
     <div class=innerbannerwrap>

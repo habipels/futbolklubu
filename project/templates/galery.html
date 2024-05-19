@@ -2,7 +2,6 @@
 {% load custom_tags %}
 {% load static %}
 {% block header %}
-
 <header class=header-main>
         <div class=header-upper>
             <div class=container>
@@ -27,27 +26,29 @@
                                 </div>
                                 <div class=nav-menu>
                                     <ul class="nav navbar-nav menu-bar">
-                                        <li><a href="/" class=active>ANA SAYFA <span></span> <span></span>
+                                        <li><a href="/" >ANA SAYFA <span></span> <span></span>
                                             <span></span> <span></span></a></li>
-                                        <li><a href=/about>HAKKIMIZDA <span></span> <span></span> <span></span>
+                                            
+                                        <li><a href="/about">HAKKIMIZDA <span></span> <span></span> <span></span>
                                             <span></span></a></li>
-                                        <li><a>GALERİ<span></span> <span></span> <span></span> <span></span></a>
+                                        <li><a class=active>GALERİ<span></span> <span></span> <span></span> <span></span></a>
                                             <ul class=sub-menu>
-                                                <li><a href=gallerypage01.html>U-11 TAKIMIMIZ</a></li>
-                                                <li><a href=gallery02.html>U-12 TAKIMIMIZ</a></li>
-                                                <li><a href=gallery03.html>U-13 TAKIMIMIZ</a></li>
+                                                <li><a href="/galery">FORMALARIMIZ</a></li>
+                                                <li><a href="/u11galery">U-11 TAKIMIMIZ</a></li>
+                                                <li><a href="/u12galery">U-12 TAKIMIMIZ</a></li>
+                                                <li><a href="/u13galery">U-13 TAKIMIMIZ</a></li>
                                             </ul>
                                         </li>
                                         <li><a>OYUNCULARIMIZ<span></span> <span></span> <span></span> <span></span></a>
                                             <ul class=sub-menu>
-                                                <li><a href=gallerypage01.html>U-11 TAKIMIMIZ</a></li>
-                                                <li><a href=gallery02.html>U-12 TAKIMIMIZ</a></li>
-                                                <li><a href=gallery03.html>U-13 TAKIMIMIZ</a></li>
+                                                <li><a href="/u11player">U-11 TAKIMIMIZ</a></li>
+                                                <li><a href="/u12player">U-12 TAKIMIMIZ</a></li>
+                                                <li><a href="/u13player">U-13 TAKIMIMIZ</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href=blog.html>TEKNİK KADROMUZ <span></span> <span></span> <span></span>
+                                        <li><a href="/ourtechnicalstaff">TEKNİK KADROMUZ <span></span> <span></span> <span></span>
                                             <span></span></a></li>
-                                        <li><a href=bookTicket.html>İLETİŞİM <span></span> <span></span>
+                                        <li><a href="/contact">İLETİŞİM <span></span> <span></span>
                                             <span></span> <span></span></a></li>
                                  
                                     </ul>
@@ -62,9 +63,7 @@
                 </div>
             </div>
         </div>
-    </header>
-
-{% endblock header %}
+    </header>{% endblock header %}
 {% block slider %}
     <div class=innerbannerwrap>
         <div class=content></div>
