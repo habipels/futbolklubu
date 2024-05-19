@@ -10596,7 +10596,7 @@ ul.slick-dots {
       font-weight: 400;
       text-transform: capitalize; }
   .playerDetailsPage-info li:nth-of-type(2) {
-    background-image: url("images/player/player01.jpg");
+    
     background-size: cover;
     background-position: top center;
     background-repeat: no-repeat;

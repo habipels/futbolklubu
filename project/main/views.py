@@ -41,3 +41,22 @@ def u_13(request):
     content = site_bilgileri_cek()
     content["foto"] = u_13_fotograflari.objects.order_by("-id")
     return render(request,"galery.html",content)
+
+def u_11_oyuncularimiz(request):
+    content = site_bilgileri_cek()
+    content["foto"] = u_11_oyunculari.objects.order_by("-id")
+    content["u11"] = "U-11 Oyuncularımız"
+    return render(request,"oyuncular.html",content)
+def u_12_oyuncularimiz(request):
+    content = site_bilgileri_cek()
+    content["foto"] = u_12_oyunculari.objects.order_by("-id")
+    content["u11"] = "U-12 Oyuncularımız"
+    return render(request,"oyuncular.html",content)
+def u_13_oyuncularimiz(request):
+    content = site_bilgileri_cek()
+    content["foto"] = u_13_oyunculari.objects.order_by("-id")
+    content["u11"] = "U-13 Oyuncularımız"
+    return render(request,"oyuncular.html",content)
+def iletisim(request):
+    content = site_bilgileri_cek()
+    return render(request,"iletisim.html",content)
