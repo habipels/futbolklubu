@@ -5,7 +5,15 @@
 <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
 <head>
     <meta charset=utf-8>
-    <meta name=description content="">
+    {% if seo_ayarlari %}
+    
+    
+    <meta name="description" content="{{seo_ayarlari.site_seo_metni_tr}}">
+    
+  <meta name="keywords" content="{{seo_ayarlari.site_seo_kelimeleri_tr}}">
+  {% else %}
+    {% endif %}
+  <meta name="author" content="Habip Eliş">
     <meta name="viewport"
           content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
    <title>{{site_adi.site_adi_sekme_tr}}</title>
@@ -154,21 +162,30 @@
         </div>
         <div class=footer-type02>
             <div class=container>
-                <div class=row><a href=index-2.html class=footer-logo><img src=images/logo.png alt=image></a>
+                <div class=row><a href="/" class=footer-logo><img src="{{logo.image.url}}" alt=image></a>
 
                     <div class=footer-container>
                         <ul class=clearfix>
-                            <li><a href=https://www.facebook.com/templatespoint.net class=bigsocial-link><i
-                                    class="fa fa-facebook"></i></a></li>
-                            <li><a href=https://twitter.com/ class=bigsocial-link target=_blank><i
-                                    class="fa fa-twitter"></i></a></li>
-                            <li><a href=https://www.behance.net/ class=bigsocial-link target=_blank><i
-                                    class="fa fa-behance"></i></a></li>
+                        {% if email_adres %}
+                              <li><a href="mailto:{{email_adres.sirket_email_adresi}}" class=bigsocial-link><i
+                            class="fa fa-google"></i></a> </li>
+                        {% else %}
+                        {% endif %}
+                    {% if sosyalmedyatw.link %}
+                         <li><a href="{{sosyalmedyatw.link}}" class=bigsocial-link><i
+                            class="fa fa-twitter"></i></a></li>
+                    {% else %}
+                    {% endif %}
+                    {% if sosyalmedyaInsgr.link %}
+                        <li><a href="{{sosyalmedyaInsgr.link}}" class=bigsocial-link><i
+                            class="fa fa-instagram"></i></a></li>
+                    {% else %}
+                    {% endif %}
+                           
                         </ul>
-                        <p><a target="_blank" href="https://www.templateshub.net">Templates Hub</a></p></div>
+                        <p><a target="_blank" href="https://www.wareyazilim.com/">Ware Yazılım</a></p></div>
                     <div class=footer-appstore>
-                        <figure><a href=#><img src=images/appstore/apple.png alt=image></a></figure>
-                        <figure><a href=#><img src=images/appstore/google.png alt=image></a></figure>
+                     
                     </div>
                 </div>
             </div>

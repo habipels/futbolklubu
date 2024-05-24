@@ -12,6 +12,17 @@ def site_bilgileri_cek():
     sozluk["u_13_sonkarsilasma"] = u_13_takimi_son_karsilasma.objects.last()
     sozluk ["hakkimizda"] = hakkimizda.objects.last()
     sozluk["teknik_kadro_ekibi"] = teknik_kadro_ekibi.objects.all()
+    sozluk["site_adi"] = site_adi.objects.last()
+    sozluk["numara"] = numara.objects.last()
+    sozluk["adres"] = adres.objects.last()
+    sozluk["email_adres"] = email_adres.objects.last()
+    sozluk["sosyalmedyaInsgr"] = sosyalmedyaInsgr.objects.last()
+    sozluk["sosyalmedyalinkd"] = sosyalmedyalinkd.objects.last()
+    sozluk["sosyalmedyaFace"] = sosyalmedyaFace.objects.last()
+    sozluk["sosyalmedyayoutube"] = sosyalmedyayoutube.objects.last()
+    sozluk["sosyalmedyatw"] = sosyalmedyatw.objects.last()
+    sozluk["seo_ayarlari"] = seo_ayarlari.objects.last()
+    
     return sozluk
 # Create your views here.
 def homepage(request):

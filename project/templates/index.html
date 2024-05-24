@@ -57,10 +57,23 @@
                             </div>
                         </nav>
                     </div>
-                    <div class=social><a href=https://www.facebook.com/templatespoint.net class=facebook><i
-                            class="fa fa-google"></i></a> <a href=https://twitter.com/itobuztech class=twitter><i
-                            class="fa fa-twitter"></i></a> <a href= https://www.instagram.com/bayrampasakocatepeatletik/ class=behance><i
-                            class="fa fa-instagram"></i></a></div>
+                    <div class=social>
+                    {% if email_adres %}
+                             <a href="mailto:{{email_adres.sirket_email_adresi}}" class=facebook><i
+                            class="fa fa-google"></i></a> 
+                        {% else %}
+                        {% endif %}
+                    {% if sosyalmedyatw.link %}
+                        <a href="{{sosyalmedyatw.link}}" class=twitter><i
+                            class="fa fa-twitter"></i></a>
+                    {% else %}
+                    {% endif %}
+                    {% if sosyalmedyaInsgr.link %}
+                       <a href="{{sosyalmedyaInsgr.link}}" class=behance><i
+                            class="fa fa-instagram"></i></a>
+                    {% else %}
+                    {% endif %}
+                     </div>
                 </div>
             </div>
         </div>
