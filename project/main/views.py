@@ -22,8 +22,12 @@ def site_bilgileri_cek():
     sozluk["sosyalmedyayoutube"] = sosyalmedyayoutube.objects.last()
     sozluk["sosyalmedyatw"] = sosyalmedyatw.objects.last()
     sozluk["seo_ayarlari"] = seo_ayarlari.objects.last()
+    sozluk["gomuluadres"] = gomulu_adres.objects.last()
     
     return sozluk
+def page_not_found_view(request, exception):
+    content = site_bilgileri_cek()
+    return render(request, '404.html',content)
 # Create your views here.
 def homepage(request):
     content = site_bilgileri_cek()

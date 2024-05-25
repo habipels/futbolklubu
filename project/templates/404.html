@@ -1,7 +1,24 @@
-{% extends "homebase.html" %}
-{% load custom_tags %}
 {% load static %}
-{% block header %}
+
+<!doctype html>
+<html class=no-js lang="">
+<meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+<head>
+    <meta charset=utf-8>
+    <meta name=description content="">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <title>404 Error</title>
+    <link rel="shortcut icon" href=favicon.ico>
+    <link rel=stylesheet href="{% static '' %}vendor.css">
+    <link rel=stylesheet href="{% static '' %}style.css">
+    <link rel=stylesheet type=text/css href="{% static '' %}css/layerslider.css">
+    <script src="{% static '' %}js/vendor/modernizr.js"></script>
+     <link rel="shortcut icon" href="{{favicon.sayfa_icon.url}}">
+</head>
+<body><!--[if lt IE 10]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
 <header class=header-main>
         <div class=header-upper>
             <div class=container>
@@ -76,35 +93,18 @@
                 </div>
             </div>
         </div>
-    </header>{% endblock header %}
-{% block slider %}
+    </header>
+<div class=errorWrapper>
+    <div class=errorHolderWrap>
+        <div class=errorHolder><h1><a href="/"><img src="{{logo.image.url}}" alt=image></a></h1>
 
-    <div class=innerbannerwrap>
-        <div class=content></div>
-        <div class=innerbanner><h2 class=bannerHeadline>İLET<span>İŞİM </span></h2></div>
+            <h2>404</h2><h4>not found</h4>
+
+            <p></p></div>
     </div>
-    <section class=innerpage_all_wrap>
-        <div class=container>
-            <div class=row><h2 class=heading>İRT<span>İBAT</span></h2>
+</div>
+<script src="{% static '' %}js/vendor/vendor.js"></script>
+<script src="{% static '' %}js/main.js"></script>
+</body>
 
-                <p class=headParagraph>Bizimle iletişime geçmekten çekinmeyin! Sorularınız, önerileriniz veya geri bildirimleriniz için her zaman buradayız.</p>
-
-                <div class=innerWrapper>
-                    <ul class="contact_icon clearfix">
-                        <li><a href="tel:+{{numara.sirket_numarasi}}"><i class="fa fa-phone"></i> <span>{{numara.sirket_numarasi_gosterilecek_metin}}</span></a></li>
-                        <li><a href="mailto:{{email_adres.sirket_email_adresi}}"><i class="fa fa-envelope-o"></i>
-                            <span>{{email_adres.sirket_email_adresi}}</span></a></li>
-                        <li><a href=#><i class="fa fa-map-marker"></i> <span>{{adres.sirket_adresi_tr}}</span></a>
-                        </li>
-                    </ul>
-                </div>
-                <h2 class=heading>KONUM <span>BİLGİSİ</span></h2>
-                <div class=innerWrapper>
-                    <iframe src="https://www.google.com/maps/embed?pb={{gomuluadres.sirket_adresi_tr}}" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-            </div>
-        </div>
-    </section>
- 
-
-{% endblock slider %}
+</html>
