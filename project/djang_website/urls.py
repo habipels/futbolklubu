@@ -18,6 +18,10 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls import handler404
+admin.site.site_header = "Sport Software"
+admin.site.site_title = "Sport Software"
+admin.site.index_title = "Sport Software İçerikler"
+
 urlpatterns = [
     path("", include('main.urls')),
     path('admin/', admin.site.urls),
