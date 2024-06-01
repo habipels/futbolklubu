@@ -3,13 +3,6 @@ from django.utils.html import mark_safe
 from .models import *
 from django.contrib.admin import AdminSite
 
-class CustomAdminSite(AdminSite):
-    # Gece temasının aktif olup olmadığını belirleyen bir bayrak
-    night_mode_enabled = False
-
-    # Tema değiştirme işlevi
-    def toggle_night_mode(self):
-        self.night_mode_enabled = not self.night_mode_enabled
 class ImageAdminMixin:
     def image_tag(self, obj):
         if obj.fotografi:

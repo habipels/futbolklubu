@@ -4,12 +4,7 @@ from django.utils.html import mark_safe
 from .models import * 
 from django.apps import AppConfig
 
-class MyAppAdminConfig(AppConfig):
-    default_auto_field = 'django.db.models.BigAutoField'
-    name = 'myapp'
-    verbose_name = "My Custom Admin Panel Name"
 
-admin.site.register(MyAppAdminConfig)
 
 class ImageAdminMixin:
     def image_tag(self, obj):
@@ -85,3 +80,7 @@ class HakkimizdaAdmin(admin.ModelAdmin):
 @admin.register(anasayfa)
 class AnasayfaAdmin(admin.ModelAdmin):
     list_display = ('hakkimizda_tr',)
+
+@admin.register(site_renkleri)
+class RenklerAdmin(admin.ModelAdmin):
+    list_display = ["renkbir", "renkbir_goster", "renkiki", "renkiki_goster", "renkuc", "renkuc_goster", "renkdort", "renkdort_goster"]

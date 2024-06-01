@@ -135,3 +135,27 @@ class hakkimizda(models.Model):
 class anasayfa(models.Model):
     
     hakkimizda_tr = RichTextField(verbose_name="Anasayfa Yazısı Türkçe")
+from django.utils.html import format_html
+class site_renkleri(models.Model):
+    renkbir = models.CharField(max_length=10,verbose_name="Renk Bir")
+    renkiki = models.CharField(max_length=10,verbose_name="Renk İki")
+    renkuc = models.CharField(max_length=10,verbose_name="Renk Üç")
+    renkdort = models.CharField(max_length=10,verbose_name="Renk Dört") 
+    class Meta:
+        verbose_name = "Sayfa Renkleri"
+        verbose_name_plural = "Sayfa Renkleri"
+    def renkbir_goster(self):
+        return format_html('<div style="width: 50px; height: 20px; background-color: {};"></div>', self.renkbir)
+    renkbir_goster.short_description = 'Renk Bir'
+
+    def renkiki_goster(self):
+        return format_html('<div style="width: 50px; height: 20px; background-color: {};"></div>', self.renkiki)
+    renkiki_goster.short_description = 'Renk İki'
+
+    def renkuc_goster(self):
+        return format_html('<div style="width: 50px; height: 20px; background-color: {};"></div>', self.renkuc)
+    renkuc_goster.short_description = 'Renk Üç'
+
+    def renkdort_goster(self):
+        return format_html('<div style="width: 50px; height: 20px; background-color: {};"></div>', self.renkdort)
+    renkdort_goster.short_description = 'Renk Dört'

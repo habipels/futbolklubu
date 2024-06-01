@@ -47,6 +47,8 @@ _________________________________
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+
+
 @import url("http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600,300,700");
 @import url("http://fonts.googleapis.com/css?family=Oswald:400,300,700");
 @import url("http://fonts.googleapis.com/css?family=Montserrat:400,700");
@@ -6057,11 +6059,11 @@ button.close {
 
 ::-moz-selection {
   color: #eaeaea;
-  background: #b81e20; }
+  background: var(--renkbir); }
 
 ::selection {
   color: #eaeaea;
-  background: #b81e20; }
+  background: var(--renkbir); }
 
 body, ul, h1, h2, h3, h4, h5, h6, p {
   margin: 0;
@@ -6085,7 +6087,7 @@ a {
     border: 0; }
 
 .form-control:focus {
-  border-color: #b81e20;
+  border-color: var(--renkbir);
   box-shadow: 0 0 0 0; }
 
 ul {
@@ -6094,7 +6096,7 @@ ul {
 h2.heading {
   font-family: "Oswald", sans-serif;
   font-size: 40px;
-  color: black;
+  color: var(--renkiki);
   font-weight: 400;
   text-transform: uppercase;
   text-align: center; }
@@ -6102,7 +6104,7 @@ h2.heading {
     width: 20%;
     left: 0; }
   h2.heading span {
-    color: #b81e20;
+    color: var(--renkbir);
     position: relative; }
     h2.heading span:after {
       position: absolute;
@@ -6116,11 +6118,11 @@ h2.heading {
 h4 {
   font-family: "Oswald", sans-serif;
   font-size: 24px;
-  color: #b81e20;
+  color: var(--renkbir);
   font-weight: 400;
   text-transform: uppercase; }
   h4 span {
-    color: black; }
+    color: var(--renkiki); }
 
 p {
   font-family: "Open Sans", sans-serif;
@@ -6134,7 +6136,7 @@ p {
   p.red_p {
     font-family: "Open Sans", sans-serif;
     font-size: 13px;
-    color: #b81e20;
+    color: var(--renkbir);
     font-weight: 400; }
 
 .social_link {
@@ -6230,12 +6232,12 @@ h6 {
 .footerheading {
   font-family: "Oswald", sans-serif;
   font-size: 20px;
-  color: black;
+  color: var(--renkiki);
   font-weight: 400;
   text-transform: uppercase;
   position: relative; }
   .footerheading span {
-    color: #b81e20; }
+    color: var(--renkbir); }
   .footerheading:after {
     position: absolute;
     content: '';
@@ -6243,7 +6245,7 @@ h6 {
     height: 2px;
     left: 0;
     width: 25%;
-    background: #b81e20; }
+    background: var(--renkbir); }
 
 .uppercaseheading {
   text-transform: uppercase; }
@@ -6297,7 +6299,7 @@ h6 {
   font-weight: 400;
   text-transform: uppercase; }
   .bannerHeadline span {
-    color: #b81e20; }
+    color: var(--renkbir); }
 
 /* ---------- aside inner page -----------*/
 .widgetinner {
@@ -6331,7 +6333,7 @@ h6 {
 .headline02 {
   font-family: "Oswald", sans-serif;
   font-size: 27px;
-  color: black;
+  color: var(--renkiki);
   font-weight: 400;
   text-transform: uppercase; }
 
@@ -6355,7 +6357,7 @@ h6 {
   font-style: italic; }
 
 .red {
-  color: #b81e20; }
+  color: var(--renkbir); }
 
 .innerpage_all_wrap h2.heading span:after {
   width: 20%; }
@@ -6376,7 +6378,7 @@ h6 {
       text-transform: capitalize;
       font-family: "Open Sans", sans-serif;
       font-size: 14px;
-      color: #b81e20;
+      color: var(--renkbir);
       font-weight: 400; }
   .search_box:after {
     position: absolute;
@@ -6385,7 +6387,7 @@ h6 {
     right: 10px;
     top: 6px;
     font-size: 18px;
-    color: #b81e20; }
+    color: var(--renkbir); }
 
 .galleryontent04 li {
   position: relative;
@@ -6425,7 +6427,7 @@ h6 {
     text-align: center;
     top: 5px;
     font-size: 18px;
-    color: #b81e20;
+    color: var(--renkbir);
     background: white;
     outline: none;
     pointer-events: auto;
@@ -6435,7 +6437,7 @@ h6 {
 .form-submessges {
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
-  color: #b81e20;
+  color: var(--renkbir);
   font-weight: 400;
   text-transform: capitalize; }
 
@@ -6531,7 +6533,7 @@ h6 {
     max-width: none; }
 
 .header-main .header-upper {
-  background: black; }
+  background: var(--renkiki); }
   .header-main .header-upper ul {
     float: right; }
     .header-main .header-upper ul li {
@@ -6584,7 +6586,7 @@ h6 {
 .header-main .sub-menu {
   list-style-type: none;
   position: absolute;
-  background: #dd2c2f;
+  background: var(--renkdort);;
   top: 100%;
   height: auto;
   max-height: 0;
@@ -6727,7 +6729,7 @@ h6 {
         position: absolute;
         height: 1px;
         width: 0;
-        background-color: #b81e20;
+        background-color: var(--renkbir);
         content: '';
         left: 50%;
         top: 100%; }
@@ -6814,7 +6816,7 @@ h6 {
     padding: 0; }
   nav ul li a.active {
     background: none;
-    color: #b81e20; }
+    color: var(--renkbir); }
     nav ul li a.active:after {
       width: 100%;
       left: 0; } }
@@ -6828,7 +6830,7 @@ h6 {
 
 @media screen and (min-width: 992px) {
   .header-main .header-upper ul li a:hover {
-    color: #b81e20; }
+    color: var(--renkbir); }
   .header-main .sub-menu {
     left: 0;
     -webkit-transform: translateX(0);
@@ -6840,7 +6842,7 @@ h6 {
     height: 1px;
     bottom: 100%;
     opacity: 0;
-    background: #b81e20;
+    background: var(--renkbir);
     left: 0;
     transition: opacity, bottom 0.4s ease-in-out; }
     .menu-bar li span:nth-of-type(2) {
@@ -6924,7 +6926,7 @@ h6 {
   max-width: 100%; }
 
 .copyright {
-  color: #b81e20;
+  color: var(--renkbir);
   transition: all 0.3s ease-in-out; }
   .copyright:hover {
     color: #8c1718; }
@@ -6949,7 +6951,7 @@ h6 {
     .widget-about p:first-of-type {
       padding: 40px 0; }
   .widget-about .uppercaseheading {
-    color: black; }
+    color: var(--renkiki); }
 
 .widget-news {
   position: relative;
@@ -6970,7 +6972,7 @@ h6 {
   .widget-news .uppercaseheading {
     margin: 10px 0;
     padding: 10px 0;
-    border-top: 1px solid black;
+    border-top: 1px solid var(--renkiki);
     width: 80%; }
 
 .widget-product {
@@ -7023,16 +7025,16 @@ h6 {
       display: block;
       transition: color 0.3s ease-in-out; }
       .widget_productdetails li a:hover {
-        color: #b81e20; }
+        color: var(--renkbir); }
     .widget_productdetails li:after {
       position: absolute;
       content: '\f105';
       font-family: 'FontAwesome';
       font-size: 20px;
-      color: #b81e20;
+      color: var(--renkbir);
       width: 26px;
       line-height: 22px;
-      border: 2px solid #b81e20;
+      border: 2px solid var(--renkbir);
       border-radius: 50%;
       top: 50%;
       text-align: center;
@@ -7099,7 +7101,7 @@ h6 {
   .widget-about {
     padding: 0; }
   .widget-newsdetails li a:hover .widget-newsinfo p {
-    color: #b81e20; } }
+    color: var(--renkbir); } }
 
 @media screen and (max-width: 600px) {
   .footer-widget .widget-about, .footer-widget .widget-news, .footer-widget .widget-product, .footer-widget .widget-comment {
@@ -7133,7 +7135,7 @@ h6 {
       font-size: 50%;
       top: -1em; }
   .bannertext02 {
-    background: #b81e20;
+    background: var(--renkbir);
     color: white;
     position: relative;
     font-style: italic;
@@ -7152,10 +7154,10 @@ h6 {
       border-right: 20px solid transparent; }
     .bannertext02:after {
       right: -21px;
-      border-top: 45px solid #b81e20; }
+      border-top: 45px solid var(--renkbir); }
     .bannertext02:before {
       left: -21px;
-      border-bottom: 45px solid #b81e20; }
+      border-bottom: 45px solid var(--renkbir); }
   .bannertext03 {
     font-family: "Montserrat", sans-serif;
     font-size: 23px;
@@ -7250,8 +7252,8 @@ h6 {
     transition-property: background, border-color, color;
     position: relative; }
     .btn-white:hover, .btn-white:focus {
-      background: #b81e20;
-      border-color: #b81e20;
+      background: var(--renkbir);
+      border-color: var(--renkbir);
       color: white; }
   .btn-green {
     background-color: #15CD4D;
@@ -7260,13 +7262,13 @@ h6 {
       color: #15CD4D;
       background: white; }
   .btn-red {
-    background: #b81e20;
+    background: var(--renkbir);
     color: white;
-    border: 1px solid #b81e20;
+    border: 1px solid var(--renkbir);
     transition: all 0.3s ease-in-out;
     transition-property: background, color; }
     .btn-red:hover, .btn-red:focus {
-      color: #b81e20;
+      color: var(--renkbir);
       background: white; }
   .btn-small {
     padding: 10px 20px;
@@ -7305,7 +7307,7 @@ h6 {
     height: 40px;
     line-height: 40px;
     text-transform: uppercase;
-    background: #b81e20;
+    background: var(--renkbir);
     display: block;
     text-align: center;
     width: 180px;
@@ -7349,14 +7351,14 @@ h6 {
       position: absolute;
       font-family: FontAwesome;
       content: '\f004';
-      color: #b81e20;
+      color: var(--renkbir);
       left: 15px;
       top: 0px;
       transition: color 0.4s ease-in-out; }
     .btn-fav:after {
       position: absolute;
       content: '';
-      background: #b81e20;
+      background: var(--renkbir);
       bottom: 0;
       left: 0;
       right: 0;
@@ -7497,7 +7499,7 @@ h6 {
         background: #e7e7e7;
         font-family: "Oswald", sans-serif;
         font-size: 16px;
-        color: #b81e20;
+        color: var(--renkbir);
         font-weight: 400;
         text-transform: uppercase;
         transition: all 0.4s ease-in-out;
@@ -7650,7 +7652,7 @@ h6 {
           content: '';
           width: 50%;
           height: 3px;
-          background-color: #b81e20;
+          background-color: var(--renkbir);
           top: 100%;
           left: 0; }
       .latestResult .result .content p {
@@ -7664,7 +7666,7 @@ h6 {
         text-overflow: ellipsis;
         text-transform: capitalize; }
         .latestResult .result .content p:first-of-type {
-          color: #b81e20;
+          color: var(--renkbir);
           text-transform: uppercase;
           font-weight: 700;
           padding: 10px 0; }
@@ -7897,7 +7899,7 @@ h6 {
 
 ul.videoLive {
   list-style-type: none;
-  background: #b81e20;
+  background: var(--renkbir);
   overflow: hidden; }
   ul.videoLive .active {
     background: #232a32; }
@@ -7928,7 +7930,7 @@ ul.videoLive {
                 transform: translateY(-50%);
         left: 30px; }
       ul.videoLive li a a.active {
-        background: black; }
+        background: var(--renkiki); }
 
 /*-------------- desktop --------------*/
 @media (min-width: 992px) {
@@ -8028,7 +8030,7 @@ ul.videoLive {
   background: #868f98; }
 
 .bg-redcolor {
-  background: #b81e20; }
+  background: var(--renkbir); }
 
 .bg-bluecolor {
   background: #486fa8; }
@@ -8049,7 +8051,7 @@ ul.videoLive {
   .sk-cube-grid .sk-cube {
     width: 33%;
     height: 33%;
-    background-color: #b81e20;
+    background-color: var(--renkbir);
     float: left;
     -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
             animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out; }
@@ -8111,10 +8113,10 @@ section {
     display: inline-block;
     margin: 0 -5px;
     float: none;
-    background: #b81e20;
+    background: var(--renkbir);
     transition: all 0.4s ease-in-out; }
     .accordion-news li:hover {
-      background: #b81e20; }
+      background: var(--renkbir); }
     .accordion-news li a {
       padding: 20px 65px;
       display: block;
@@ -8126,7 +8128,7 @@ section {
       position: relative;
       transition: all 0.4s ease-in-out; }
     .accordion-news li.active, .accordion-news li:hover {
-      background: black;
+      background: var(--renkiki);
       z-index: 2; }
       .accordion-news li.active a, .accordion-news li:hover a {
         color: rgba(255, 255, 255, 0.7); }
@@ -8135,7 +8137,7 @@ section {
         height: 0;
         border-top: 70px solid transparent;
         border-bottom: 0 solid transparent;
-        border-right: 50px solid black;
+        border-right: 50px solid var(--renkiki);
         content: '';
         right: 100%;
         top: 0;
@@ -8145,7 +8147,7 @@ section {
         height: 0;
         border-top: 70px solid transparent;
         border-bottom: 0 solid transparent;
-        border-left: 50px solid black;
+        border-left: 50px solid var(--renkiki);
         content: '';
         left: 100%;
         top: 0;
@@ -8186,7 +8188,7 @@ section {
     .news_display_container .content-01 .describtion {
       padding: 10px 0; }
   .news_display_container .news_date {
-    background: #b81e20; }
+    background: var(--renkbir); }
     .news_display_container .news_date span {
       font-family: "Open Sans", sans-serif;
       font-size: 12px;
@@ -8277,11 +8279,11 @@ section {
       border-radius: 50%;
       background: #979da0; }
     .historyMeter li.active {
-      border-left-color: #b81e20; }
+      border-left-color: var(--renkbir); }
       .historyMeter li.active span {
-        color: #b81e20; }
+        color: var(--renkbir); }
       .historyMeter li.active a:after {
-        background: #b81e20; }
+        background: var(--renkbir); }
     .historyMeter li span {
       position: absolute;
       top: -30px;
@@ -8385,7 +8387,7 @@ section {
       .playerDetails li.playerInfo span {
         padding: 5px 20px; }
         .playerDetails li.playerInfo span:first-of-type {
-          background: black;
+          background: var(--renkiki);
           padding-left: 60px;
           position: relative;
           transition: all 0.3s ease-in-out; }
@@ -8398,12 +8400,12 @@ section {
             right: -32px;
             border-top: 0px solid transparent;
             border-bottom: 34px solid transparent;
-            border-left: 32px solid black;
+            border-left: 32px solid var(--renkiki);
             transition: all 0.3s ease-in-out; }
         .playerDetails li.playerInfo span i {
           margin-right: 10px; }
     .playerDetails li:first-of-type {
-      background: #b81e20;
+      background: var(--renkbir);
       padding: 20px 20px 20px 20px; }
     .playerDetails li span:first-of-type {
       position: relative;
@@ -8451,9 +8453,9 @@ section {
       line-height: 1;
       opacity: 1; }
     .playerFig:hover .playerDetails li.playerInfo span:first-of-type, .homeplayer .slick-current .playerDetails li.playerInfo span:first-of-type {
-      background: #b81e20; }
+      background: var(--renkbir); }
       .playerFig:hover .playerDetails li.playerInfo span:first-of-type:after, .homeplayer .slick-current .playerDetails li.playerInfo span:first-of-type:after {
-        border-left-color: #b81e20; } }
+        border-left-color: var(--renkbir); } }
 
 /*-------------- gallery ----------------*/
 .gallery {
@@ -8488,7 +8490,7 @@ section {
 
 .gallery_info {
   width: 100%;
-  background-color: #b81e20;
+  background-color: var(--renkbir);
   padding: 20px 0; }
 
 .galleryinfo_wrap p {
@@ -8556,7 +8558,7 @@ section {
     overflow: hidden;
     background: #fff; }
   .awards h2 {
-    color: #b81e20; }
+    color: var(--renkbir); }
   .awards-wrap {
     list-style-type: none;
     overflow: hidden; }
@@ -8595,7 +8597,7 @@ section {
     .awards-info li {
       width: 50%;
       float: left;
-      background: #b81e20;
+      background: var(--renkbir);
       position: relative;
       font-family: "Oswald", sans-serif;
       font-size: 16px;
@@ -8613,7 +8615,7 @@ section {
           position: absolute;
           border-top: 0px solid transparent;
           border-bottom: 44px solid transparent;
-          border-left: 30px solid #b81e20;
+          border-left: 30px solid var(--renkbir);
           z-index: 2; }
 
 @media screen and (min-width: 992px) {
@@ -8672,7 +8674,7 @@ section {
     background-position: center;
     background-repeat: no-repeat; }
   .product_info .price {
-    color: #b81e20; }
+    color: var(--renkbir); }
 
 @media screen and (max-width: 479px) {
   .product_details li {
@@ -8701,7 +8703,7 @@ section {
       width: 25%; } }
 
 .wrap_match_next {
-  background-color: #b81e20;
+  background-color: var(--renkbir);
   padding: 20px 0;
   text-align: center;
   display: table-cell;
@@ -8798,7 +8800,7 @@ section {
   background-position: top center;
   background-repeat: no-repeat;
   padding: 15px 0;
-  border-right: 2px solid #b81e20;
+  border-right: 2px solid var(--renkbir);
   text-align: center;
   font-family: "Open Sans", sans-serif;
   font-size: 15px;
@@ -8891,9 +8893,9 @@ section {
     padding: 0; }
   .match_timing {
     padding: 0px;
-    background-color: #b81e20; }
+    background-color: var(--renkbir); }
   .home_tInfo::-webkit-scrollbar {
-    background: #b81e20; }
+    background: var(--renkbir); }
   .match_versus-wrap {
     padding: 0;
     background: #232a32; }
@@ -8939,19 +8941,19 @@ section {
   .right-triangle:after {
     border-bottom: 400px solid transparent;
     border-top: 0px solid transparent;
-    border-left: 175px solid #b81e20;
+    border-left: 175px solid var(--renkbir);
     left: 100%; }
   .left_triangle:after {
     right: 100%;
     border-bottom: 400px solid transparent;
     border-top: 0px solid transparent;
-    border-right: 175px solid #b81e20; } }
+    border-right: 175px solid var(--renkbir); } }
 
 @media screen and (min-width: 1200px) {
   .match_timing {
     height: 400px; }
   .counter-wrap li {
-    border-bottom: 2px solid #b81e20;
+    border-bottom: 2px solid var(--renkbir);
     border-right: 0px; } }
 
 .widgetinfowrap {
@@ -8982,7 +8984,7 @@ section {
     text-transform: uppercase;
     font-family: "Open Sans", sans-serif;
     font-size: 13px;
-    color: #b81e20;
+    color: var(--renkbir);
     font-weight: 400;
     padding: 5px 0px 10px 50px; }
 
@@ -9007,7 +9009,7 @@ section {
     -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
             transform: translateX(-50%);
-    color: #b81e20; }
+    color: var(--renkbir); }
 
 .buymatchticket {
   padding: 80px 0 40px; }
@@ -9022,8 +9024,8 @@ section {
   .buymatchticket .ticktbody {
     padding-left: 50px; }
   .buymatchticket .social_link {
-    color: #b81e20;
-    border: 1px solid #b81e20; }
+    color: var(--renkbir);
+    border: 1px solid var(--renkbir); }
     .buymatchticket .social_link:hover {
       border-color: transparent;
       color: white; }
@@ -9052,7 +9054,7 @@ section {
   font-family: FontAwesome;
   top: 5px;
   left: 20px;
-  color: #b81e20;
+  color: var(--renkbir);
   font-size: 18px;
   -webkit-font-smoothing: antialiased; }
 
@@ -9088,7 +9090,7 @@ a.blacklrnmore {
   .ticketInfo li:nth-of-type(odd) {
     background: #454c54; }
     .ticketInfo li:nth-of-type(odd) .vs {
-      color: #b81e20; }
+      color: var(--renkbir); }
   .ticketInfo li:nth-of-type(even) {
     background: #868f98; }
 
@@ -9232,7 +9234,7 @@ a.blacklrnmore {
   padding-right: 15px;
   padding: 0px 30px; }
   .shop_info .headline01 {
-    color: #b81e20;
+    color: var(--renkbir);
     padding: 20px 0; }
     .shop_info .headline01 a {
       color: inherit; }
@@ -9268,8 +9270,8 @@ a.blacklrnmore {
     padding: 0;
     transition: all 0.4s ease-in-out; }
     .sizepic a:hover {
-      color: #b81e20;
-      border-color: #b81e20; }
+      color: var(--renkbir);
+      border-color: var(--renkbir); }
 
 @media screen and (max-width: 479px) {
   .shop_info, .shop-img {
@@ -9303,7 +9305,7 @@ a.blacklrnmore {
   .wrap-slide h5 {
     font-family: "Oswald", sans-serif;
     font-size: 20px;
-    color: #b81e20;
+    color: var(--renkbir);
     font-weight: 400;
     text-transform: uppercase;
     margin-bottom: 20px; }
@@ -9469,7 +9471,7 @@ a.blacklrnmore {
 .rate-item > div {
   font-family: "Oswald", sans-serif;
   font-size: 40px;
-  color: #b81e20;
+  color: var(--renkbir);
   font-weight: 400; }
 
 .rate-item span {
@@ -9527,7 +9529,7 @@ a.blacklrnmore {
   .product-list h5 {
     font-family: "Oswald", sans-serif;
     font-size: 20px;
-    color: #b81e20;
+    color: var(--renkbir);
     font-weight: 400;
     text-transform: uppercase; }
   .product-list ul li {
@@ -9558,7 +9560,7 @@ a.blacklrnmore {
   .shop-feedback h5 {
     font-family: "Oswald", sans-serif;
     font-size: 20px;
-    color: #b81e20;
+    color: var(--renkbir);
     font-weight: 400;
     text-transform: uppercase; }
     .shop-feedback h5 a {
@@ -9657,7 +9659,7 @@ a.blacklrnmore {
       float: left;
       width: 100%; } }
   .blog_widget .oswald16 {
-    color: black;
+    color: var(--renkiki);
     padding-bottom: 20px; }
   .blog_widget .commentinfo {
     padding: 10px 15px; }
@@ -9665,8 +9667,8 @@ a.blacklrnmore {
     margin: 20px 0; }
 
 .blog_social .social_link {
-  color: #b81e20;
-  border-color: #b81e20; }
+  color: var(--renkbir);
+  border-color: var(--renkbir); }
 
 @media screen and (min-width: 480px) {
   .blog-detailsfooter01, .blog-detailsfooter02 {
@@ -9728,7 +9730,7 @@ a.blacklrnmore {
   .contact-form h6 {
     font-family: "Oswald", sans-serif;
     font-size: 20px;
-    color: #b81e20;
+    color: var(--renkbir);
     font-weight: 400;
     text-transform: uppercase;
     margin: 15px 0; }
@@ -9772,7 +9774,7 @@ a.blacklrnmore {
     border-radius: 0px;
     transition: all 0.5s ease; }
   .contact-form .form-control:focus {
-    border: 1px solid #b81e20;
+    border: 1px solid var(--renkbir);
     box-shadow: 0 0 0 0; }
   .contact-form button.submit {
     position: relative;
@@ -9784,7 +9786,7 @@ a.blacklrnmore {
     height: 50px;
     outline: none;
     border: 0;
-    background: #b81e20;
+    background: var(--renkbir);
     text-transform: uppercase;
     font-family: "Open Sans", sans-serif;
     font-size: 14px;
@@ -9841,8 +9843,8 @@ a.blacklrnmore {
 #accordion i {
   margin-right: 10px;
   margin-left: 10px;
-  border: 1px solid #b81e20;
-  color: #b81e20;
+  border: 1px solid var(--renkbir);
+  color: var(--renkbir);
   border-radius: 50%;
   width: 22px;
   font-size: 5px;
@@ -9875,7 +9877,7 @@ a.blacklrnmore {
       width: 6px;
       height: 6px;
       border-radius: 50%;
-      background-color: #b81e20; }
+      background-color: var(--renkbir); }
 
 #accordion .panel-default {
   border: none; }
@@ -9917,7 +9919,7 @@ a.blacklrnmore {
     .cloud_tag li a:after {
       position: absolute;
       content: '';
-      background: #b81e20;
+      background: var(--renkbir);
       width: 100%;
       height: 100%;
       left: 0;
@@ -10008,7 +10010,7 @@ a.blacklrnmore {
         float: left;
         width: 33.3333333333%; } }
     .achievement .fig > div {
-      background: #b81e20;
+      background: var(--renkbir);
       height: 60px;
       line-height: 60px;
       position: absolute;
@@ -10026,12 +10028,12 @@ ul.achievement.slick-slide.slick-current.slick-active {
   outline: none; }
 
 .slick-dots button:focus {
-  border: #b81e20;
+  border: var(--renkbir);
   box-shadow: 0 0 0 0;
-  outline: 1px solid #b81e20; }
+  outline: 1px solid var(--renkbir); }
 
 .slick-dots .slick-active button {
-  background: #b81e20;
+  background: var(--renkbir);
   color: white;
   border: none; }
 
@@ -10103,9 +10105,9 @@ ul.slick-dots {
       background: transparent;
       transition: all 0.3s ease-in-out; }
       ul.slick-dots li button:hover {
-        background: #b81e20;
+        background: var(--renkbir);
         color: white;
-        border-color: #b81e20; }
+        border-color: var(--renkbir); }
 
 /* ------------ player details ---------------*/
 .playerDetails02 {
@@ -10138,7 +10140,7 @@ ul.slick-dots {
         float: left;
         width: 66.6666666667%; } }
     .player02info .oswald16 {
-      color: #b81e20;
+      color: var(--renkbir);
       padding: 10px 0; }
     .player02info p {
       padding: 10px 0;
@@ -10148,7 +10150,7 @@ ul.slick-dots {
       float: right;
       font-family: "Open Sans", sans-serif;
       font-size: 18px;
-      color: #b81e20;
+      color: var(--renkbir);
       font-weight: 400;
       text-transform: capitalize; }
     .player02info ul li {
@@ -10232,7 +10234,7 @@ ul.slick-dots {
             transform: scale(1.1); }
   .playersocial a.social_link:hover {
     color: white;
-    background: #b81e20; } }
+    background: var(--renkbir); } }
 
 /*-------------- sponsors -----------*/
 .sponsors {
@@ -10302,7 +10304,7 @@ ul.slick-dots {
   text-align: center; }
   .galleryMenu li {
     display: inline-block;
-    background-color: #b81e20; }
+    background-color: var(--renkbir); }
   .galleryMenu a {
     display: block;
     font-family: "Roboto", sans-serif;
@@ -10331,7 +10333,7 @@ ul.slick-dots {
 .image_g {
   width: 100%;
   height: 200px;
-  background: #b81e20;
+  background: var(--renkbir);
   background-repeat: no-repeat !important;
   background-size: cover !important;
   background-position: center !important;
@@ -10349,7 +10351,7 @@ ul.slick-dots {
   .gallery-info h6 {
     font-family: "Oswald", sans-serif;
     font-size: 20px;
-    color: #b81e20;
+    color: var(--renkbir);
     font-weight: 400;
     margin-bottom: 10px; }
 
@@ -10473,9 +10475,9 @@ ul.slick-dots {
       font-size: 30px;
       width: 60px;
       height: 60px;
-      border: 1px solid #b81e20;
+      border: 1px solid var(--renkbir);
       border-radius: 50%;
-      color: #b81e20;
+      color: var(--renkbir);
       padding: 14px 0;
       float: left; }
     .contact_icon li span {
@@ -10539,12 +10541,12 @@ ul.slick-dots {
   padding: 5px 0;
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
-  color: #b81e20;
+  color: var(--renkbir);
   font-weight: 700;
   text-transform: capitalize; }
 
 .parsley-errors-list {
-  color: #b81e20; }
+  color: var(--renkbir); }
 
 @media screen and (min-width: 480px) {
   .contact_icon li {
@@ -10586,7 +10588,7 @@ ul.slick-dots {
     .playerDetailsPage-info li:first-of-type h2 {
       font-family: "Oswald", sans-serif;
       font-size: 80px;
-      color: #b81e20;
+      color: var(--renkbir);
       font-weight: 400;
       line-height: 80px; }
     .playerDetailsPage-info li:first-of-type h3 {
@@ -10628,7 +10630,7 @@ ul.slick-dots {
 .evntp {
   font-family: "Oswald", sans-serif;
   font-size: 30px;
-  color: #b81e20;
+  color: var(--renkbir);
   font-weight: 400;
   text-transform: uppercase; }
 
@@ -10660,7 +10662,7 @@ ul.slick-dots {
     font-size: 18px;
     width: 35px;
     height: 35px;
-    background: #b81e20;
+    background: var(--renkbir);
     border-radius: 50%;
     color: white;
     padding: 8.5px 0;
@@ -10693,7 +10695,7 @@ ul.slick-dots {
 
 .sb_header {
   padding: 60px 0px 30px 50px;
-  border-top: 10px solid #b81e20; }
+  border-top: 10px solid var(--renkbir); }
   .sb_header h4 {
     font-family: "Oswald", sans-serif;
     font-size: 26px;
@@ -10749,7 +10751,7 @@ ul.slick-dots {
     text-transform: uppercase;
     font-family: "Oswald", sans-serif;
     font-size: 15px;
-    color: #b81e20;
+    color: var(--renkbir);
     font-weight: 400;
     position: relative; }
     .second-column > div a:after {
@@ -10757,7 +10759,7 @@ ul.slick-dots {
       color: #e7e7e7;
       content: '';
       font-family: 'FontAwesome';
-      color: #b81e20;
+      color: var(--renkbir);
       font-size: 15px;
       top: 0; }
     .second-column > div a.prevScore:after {
@@ -10782,7 +10784,7 @@ ul.slick-dots {
     .second-column ul:first-of-type {
       font-family: "Open Sans", sans-serif;
       font-size: 15px;
-      color: #b81e20;
+      color: var(--renkbir);
       font-weight: 400; }
 
 @media screen and (min-width: 480px) {
@@ -10846,7 +10848,7 @@ ul.slick-dots {
       font-weight: 400;
       display: block; }
     .yr_accordion li.active {
-      background: #b81e20; }
+      background: var(--renkbir); }
       .yr_accordion li.active a {
         color: white; }
 
@@ -10863,7 +10865,7 @@ ul.slick-dots {
       .yr_accordion li a {
         transition: all 0.4s ease-in-out; }
       .yr_accordion li:hover {
-        background: #b81e20; }
+        background: var(--renkbir); }
         .yr_accordion li:hover a {
           color: white; }
   .playerDetailsPage-info li {
@@ -10883,7 +10885,7 @@ ul.slick-dots {
   .achivement-dtl li:first-of-type h6 {
     font-family: "Oswald", sans-serif;
     font-size: 16px;
-    color: #b81e20;
+    color: var(--renkbir);
     font-weight: 400; }
   .achivement-dtl li:nth-of-type(2) {
     background-image: url("images/awards/award-d01.jpg");
@@ -10908,7 +10910,7 @@ ul.slick-dots {
     .achivement-dtl li .bio_player span {
       font-family: "Oswald", sans-serif;
       font-size: 16px;
-      color: #b81e20;
+      color: var(--renkbir);
       font-weight: 400;
       margin-right: 10px; }
 
@@ -10918,7 +10920,7 @@ ul.slick-dots {
   font-size: 28px;
   color: white;
   font-weight: 400;
-  background: #b81e20;
+  background: var(--renkbir);
   text-transform: uppercase;
   padding: 20px 0; }
 
@@ -10931,7 +10933,7 @@ ul.slick-dots {
   .clubHistoryWrapper h4 {
     font-family: "Oswald", sans-serif;
     font-size: 28px;
-    color: #b81e20;
+    color: var(--renkbir);
     font-weight: 400;
     margin: 60px 0 0px; }
   .clubHistoryWrapper p {
@@ -10947,7 +10949,7 @@ ul.slick-dots {
     float: right;
     margin: 30px 0;
     position: relative;
-    border-left: 2px solid #b81e20; }
+    border-left: 2px solid var(--renkbir); }
 
 .accordion-history {
   margin: 30px 0; }
@@ -10968,7 +10970,7 @@ ul.slick-dots {
       left: 5px;
       line-height: 20px;
       font-size: 20px;
-      color: black;
+      color: var(--renkiki);
       transition: -webkit-transform 0.3s ease-in-out;
       transition: transform 0.3s ease-in-out; }
     .accordion-history .clubHead a.collapsed:after {
@@ -11027,10 +11029,10 @@ ul.slick-dots {
   .errorHolder h4 {
     font-family: "Oswald", sans-serif;
     font-size: 40px;
-    color: #b81e20;
+    color: var(--renkbir);
     font-weight: 400; }
     .errorHolder h4 span {
-      color: #b81e20;
+      color: var(--renkbir);
       position: relative; }
       .errorHolder h4 span:after {
         position: absolute;
@@ -11038,7 +11040,7 @@ ul.slick-dots {
         height: 2px;
         left: 0;
         width: 40%;
-        background: #b81e20;
+        background: var(--renkbir);
         top: 100%; }
   .errorHolder P {
     margin: 40px auto;
@@ -11125,7 +11127,7 @@ ul.slick-dots {
         position: absolute;
         bottom: 25px;
         left: 25px;
-        background: #b81e20;
+        background: var(--renkbir);
         height: 20px;
         width: 20px;
         display: block;
@@ -11168,7 +11170,7 @@ ul.slick-dots {
     color: #ccc; }
     .card-item .form-control:focus {
       box-shadow: 0 0 0 0;
-      border: 1px solid #b81e20; }
+      border: 1px solid var(--renkbir); }
   .card-item .big-content {
     width: 100%;
     float: left;
@@ -11305,14 +11307,14 @@ ul.slick-dots {
   .carttype02 .item-details h6 {
     font-family: "Roboto", sans-serif;
     font-size: 18px;
-    color: #b81e20;
+    color: var(--renkbir);
     font-weight: 700;
     text-transform: capitalize; }
   .carttype02 .item-details p {
     width: 70%;
     padding: 20px 0; }
   .carttype02 .item-details > div i {
-    color: #b81e20; }
+    color: var(--renkbir); }
   .carttype02 .item-details > div span {
     font-family: "Roboto", sans-serif;
     font-size: 14px;
