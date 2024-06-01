@@ -135,15 +135,22 @@ class hakkimizda(models.Model):
 class anasayfa(models.Model):
     
     hakkimizda_tr = RichTextField(verbose_name="Anasayfa Yazısı Türkçe")
+from django.db import models
+from django.contrib import admin
 from django.utils.html import format_html
+from django import forms
+from django.utils.safestring import mark_safe
+
 class site_renkleri(models.Model):
-    renkbir = models.CharField(max_length=10,verbose_name="Renk Bir")
-    renkiki = models.CharField(max_length=10,verbose_name="Renk İki")
-    renkuc = models.CharField(max_length=10,verbose_name="Renk Üç")
-    renkdort = models.CharField(max_length=10,verbose_name="Renk Dört") 
+    renkbir = models.CharField(max_length=10, verbose_name="Renk Bir")
+    renkiki = models.CharField(max_length=10, verbose_name="Renk İki")
+    renkuc = models.CharField(max_length=10, verbose_name="Renk Üç")
+    renkdort = models.CharField(max_length=10, verbose_name="Renk Dört")
+
     class Meta:
         verbose_name = "Sayfa Renkleri"
         verbose_name_plural = "Sayfa Renkleri"
+
     def renkbir_goster(self):
         return format_html('<div style="width: 50px; height: 20px; background-color: {};"></div>', self.renkbir)
     renkbir_goster.short_description = 'Renk Bir'
@@ -159,3 +166,23 @@ class site_renkleri(models.Model):
     def renkdort_goster(self):
         return format_html('<div style="width: 50px; height: 20px; background-color: {};"></div>', self.renkdort)
     renkdort_goster.short_description = 'Renk Dört'
+
+class ColorPickerWidget(forms.TextInput):
+    input_type = 'color'
+
+    def render(self, name, value, attrs=None, renderer=None):
+        if value is None:
+            value = '#ffffff'  # Varsayılan renk beyaz
+        return mark_safe(f'<input type="color" name="{name}" value="{value}" {forms.widgets.flatatt(attrs)}>')
+
+class SiteRenkleriForm(forms.ModelForm):
+    class Meta:
+        model = site_renkleri
+        fields = ['renkbir', 'renkiki', 'renkuc', 'renkdort']
+        widgets = {
+            'renkbir': ColorPickerWidget(),
+            'renkiki': ColorPickerWidget(),
+            'renkuc': ColorPickerWidget(),
+            'renkdort': ColorPickerWidget(),
+        }
+

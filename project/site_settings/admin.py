@@ -83,4 +83,5 @@ class AnasayfaAdmin(admin.ModelAdmin):
 
 @admin.register(site_renkleri)
 class RenklerAdmin(admin.ModelAdmin):
+    
     list_display = ["renkbir", "renkbir_goster", "renkiki", "renkiki_goster", "renkuc", "renkuc_goster", "renkdort", "renkdort_goster"]

@@ -23,6 +23,7 @@ def site_bilgileri_cek():
     sozluk["sosyalmedyatw"] = sosyalmedyatw.objects.last()
     sozluk["seo_ayarlari"] = seo_ayarlari.objects.last()
     sozluk["gomuluadres"] = gomulu_adres.objects.last()
+    sozluk["renkler"] = site_renkleri.objects.last()
     
     return sozluk
 def page_not_found_view(request, exception):
