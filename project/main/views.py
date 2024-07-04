@@ -24,6 +24,7 @@ def site_bilgileri_cek():
     sozluk["seo_ayarlari"] = seo_ayarlari.objects.last()
     sozluk["gomuluadres"] = gomulu_adres.objects.last()
     sozluk["renkler"] = site_renkleri.objects.last()
+    sozluk["sponsorlar"] = sponsorlar.objects.all()
     
     return sozluk
 def page_not_found_view(request, exception):
@@ -33,6 +34,9 @@ def page_not_found_view(request, exception):
 def homepage(request):
     content = site_bilgileri_cek()
     return render(request,"index.html",content)
+def fikstur(request):
+    content = site_bilgileri_cek()
+    return render(request,"fikstur.html",content)
 
 def about(request):
     content = site_bilgileri_cek()

@@ -89,3 +89,7 @@ class u_13_oyunculariAdmin(admin.ModelAdmin, ImageAdminMixin):
     search_fields = ('adi_soyadi', 'forma_numarasi', 'mevki')
 
 
+@admin.register(sponsorlar)
+class sponsorlarimiz(admin.ModelAdmin, ImageAdminMixin):
+    list_display = ('adi_soyadi', 'image_tag')
+    search_fields = ('adi_soyadi',)

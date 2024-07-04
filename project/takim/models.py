@@ -150,3 +150,10 @@ class u_13_oyunculari(models.Model):
     class Meta:
         verbose_name = "U-13 Oyuncularımız"
         verbose_name_plural ="U-13 Oyuncularımız"
+
+class sponsorlar(models.Model):
+    adi_soyadi = models.CharField(max_length=200,verbose_name="Sponsor Adı",blank=True,null=True)
+    fotografi = models.ImageField(upload_to='oyunculari/',verbose_name="Formalarımız")
+    class Meta:
+        verbose_name = "Sponsorlarımız"
+        verbose_name_plural ="Sponsorlarımız"
