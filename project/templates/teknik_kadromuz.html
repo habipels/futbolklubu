@@ -2,6 +2,7 @@
 {% load custom_tags %}
 {% load static %}
 {% block header %}
+
 <header class=header-main>
         <div class=header-upper>
             <div class=container>
@@ -25,11 +26,19 @@
                                         <span class=icon-bar></span></button>
                                 </div>
                                 <div class=nav-menu>
-                                    <ul class="nav navbar-nav menu-bar">
-                                        <li><a href="/" >ANA SAYFA <span></span> <span></span>
-                                            <span></span> <span></span></a></li>
-                                            
-                                        <li><a href="/about">HAKKIMIZDA <span></span> <span></span> <span></span>
+                                    <ul   class="nav navbar-nav menu-bar">
+                                    
+                                        <li><a>KULÜBÜMÜZ<span></span> <span></span> <span></span> <span></span></a>
+                                            <ul class=sub-menu>
+                                                <li><a href="/">ANA SAYFA</a></li>
+                                                <li><a href="/about">HAKKIMIZDA</a></li>
+                                                <li><a href="/contact">İLETİŞİM</a></li>
+                                                
+                                            </ul>
+                                        </li>
+                                        <li><a  href="/fixture">FİKSTÜR <span></span> <span></span> <span></span>
+                                            <span></span></a></li>
+                                        <li><a href="/sportsschool">SPOR OKULU <span></span> <span></span> <span></span>
                                             <span></span></a></li>
                                         <li><a>GALERİ<span></span> <span></span> <span></span> <span></span></a>
                                             <ul class=sub-menu>
@@ -46,10 +55,9 @@
                                                 <li><a href="/u13player">U-13 TAKIMIMIZ</a></li>
                                             </ul>
                                         </li>
-                                        <li><a class=active href="/ourtechnicalstaff">TEKNİK KADROMUZ <span></span> <span></span> <span></span>
+                                        <li><a class="active" href="/ourtechnicalstaff">TEKNİK KADROMUZ <span></span> <span></span> <span></span>
                                             <span></span></a></li>
-                                        <li><a href="/contact">İLETİŞİM <span></span> <span></span>
-                                            <span></span> <span></span></a></li>
+                                        
                                  
                                     </ul>
                                 </div>
@@ -58,7 +66,7 @@
                     </div>
                     <div class=social>
                     {% if email_adres %}
-                            <a href="mailto:{{email_adres.sirket_email_adresi}}" class=facebook><i
+                             <a href="mailto:{{email_adres.sirket_email_adresi}}" class=facebook><i
                             class="fa fa-google"></i></a> 
                         {% else %}
                         {% endif %}
@@ -76,8 +84,9 @@
                 </div>
             </div>
         </div>
-    </header>{% endblock header %}
-{% block slider %}
+    </header>
+
+{% endblock header %}{% block slider %}
 
 <div class=innerbannerwrap>
     <div class=innerbanner><h2 class=bannerHeadline>TEKNİK <span>KADROMUZ</span></h2></div>

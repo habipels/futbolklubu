@@ -135,6 +135,9 @@ class hakkimizda(models.Model):
 class anasayfa(models.Model):
     
     hakkimizda_tr = RichTextField(verbose_name="Anasayfa Yazısı Türkçe")
+class spor_okulu(models.Model):
+    
+    hakkimizda_tr = RichTextField(verbose_name="Anasayfa Yazısı Türkçe")
 from django.db import models
 from django.contrib import admin
 from django.utils.html import format_html

@@ -2,61 +2,69 @@
 {% load custom_tags %}
 {% load static %}
 {% block header %}
+
 <header class=header-main>
-    <div class=header-upper>
-        <div class=container>
-            <div class=row>
-                <ul>
-                    <li><a href="/">{{site_adi.site_adi_sekme_tr}}</a></li>
-                    
-                </ul>
+        <div class=header-upper>
+            <div class=container>
+                <div class=row>
+                    <ul>
+                        <li><a href="/">{{site_adi.site_adi_sekme_tr}}</a></li>
+                        
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="header-lower clearfix">
-        <div class=container>
-            <div class=row><h1 class=logo><a href="/"><img src="{{logo.image.url}}" alt=image></a></h1>
+        <div class="header-lower clearfix">
+            <div class=container>
+                <div class=row><h1 class=logo><a href="/"><img src="{{logo.image.url}}" alt=image></a></h1>
 
-                <div class=menubar>
-                    <nav class=navbar>
-                        <div class=nav-wrapper>
-                            <div class=navbar-header>
-                                <button type=button class=navbar-toggle><span class=sr-only>Toggle navigation</span>
-                                    <span class=icon-bar></span></button>
-                            </div>
-                            <div class=nav-menu>
-                                <ul class="nav navbar-nav menu-bar">
-                                    <li><a href="/" >ANA SAYFA <span></span> <span></span>
-                                        <span></span> <span></span></a></li>
+                    <div class=menubar>
+                        <nav class=navbar>
+                            <div class=nav-wrapper>
+                                <div class=navbar-header>
+                                    <button type=button class=navbar-toggle><span class=sr-only>Toggle navigation</span>
+                                        <span class=icon-bar></span></button>
+                                </div>
+                                <div class=nav-menu>
+                                    <ul   class="nav navbar-nav menu-bar">
+                                    
+                                        <li><a>KULÜBÜMÜZ<span></span> <span></span> <span></span> <span></span></a>
+                                            <ul class=sub-menu>
+                                                <li><a href="/">ANA SAYFA</a></li>
+                                                <li><a href="/about">HAKKIMIZDA</a></li>
+                                                <li><a href="/contact">İLETİŞİM</a></li>
+                                                
+                                            </ul>
+                                        </li>
+                                        <li><a  href="/fixture">FİKSTÜR <span></span> <span></span> <span></span>
+                                            <span></span></a></li>
+                                        <li><a href="/sportsschool">SPOR OKULU <span></span> <span></span> <span></span>
+                                            <span></span></a></li>
+                                        <li><a>GALERİ<span></span> <span></span> <span></span> <span></span></a>
+                                            <ul class=sub-menu>
+                                                <li><a href="/galery">FORMALARIMIZ</a></li>
+                                                <li><a href="/u11galery">U-11 TAKIMIMIZ</a></li>
+                                                <li><a href="/u12galery">U-12 TAKIMIMIZ</a></li>
+                                                <li><a href="/u13galery">U-13 TAKIMIMIZ</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a class="active">OYUNCULARIMIZ<span></span> <span></span> <span></span> <span></span></a>
+                                            <ul class=sub-menu>
+                                                <li><a href="/u11player">U-11 TAKIMIMIZ</a></li>
+                                                <li><a href="/u12player">U-12 TAKIMIMIZ</a></li>
+                                                <li><a href="/u13player">U-13 TAKIMIMIZ</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="/ourtechnicalstaff">TEKNİK KADROMUZ <span></span> <span></span> <span></span>
+                                            <span></span></a></li>
                                         
-                                    <li><a href="/about">HAKKIMIZDA <span></span> <span></span> <span></span>
-                                        <span></span></a></li>
-                                    <li><a>GALERİ<span></span> <span></span> <span></span> <span></span></a>
-                                        <ul class=sub-menu>
-                                            <li><a href="/galery">FORMALARIMIZ</a></li>
-                                            <li><a href="/u11galery">U-11 TAKIMIMIZ</a></li>
-                                            <li><a href="/u12galery">U-12 TAKIMIMIZ</a></li>
-                                            <li><a href="/u13galery">U-13 TAKIMIMIZ</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a class=active>OYUNCULARIMIZ<span></span> <span></span> <span></span> <span></span></a>
-                                        <ul class=sub-menu>
-                                            <li><a href="/u11player">U-11 TAKIMIMIZ</a></li>
-                                            <li><a href="/u12player">U-12 TAKIMIMIZ</a></li>
-                                            <li><a href="/u13player">U-13 TAKIMIMIZ</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="/ourtechnicalstaff">TEKNİK KADROMUZ <span></span> <span></span> <span></span>
-                                        <span></span></a></li>
-                                    <li><a href="/contact">İLETİŞİM <span></span> <span></span>
-                                        <span></span> <span></span></a></li>
-                             
-                                </ul>
+                                 
+                                    </ul>
+                                </div>
                             </div>
-                        </div>
-                    </nav>
-                </div>
-                <div class=social>
+                        </nav>
+                    </div>
+                    <div class=social>
                     {% if email_adres %}
                              <a href="mailto:{{email_adres.sirket_email_adresi}}" class=facebook><i
                             class="fa fa-google"></i></a> 
@@ -73,10 +81,11 @@
                     {% else %}
                     {% endif %}
                      </div>
+                </div>
             </div>
         </div>
-    </div>
-</header>
+    </header>
+
 {% endblock header %}
 {% block slider %}
     <div class=innerbannerwrap>

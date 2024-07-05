@@ -2,6 +2,7 @@
 {% load custom_tags %}
 {% load static %}
 {% block header %}
+
 <header class=header-main>
         <div class=header-upper>
             <div class=container>
@@ -25,11 +26,19 @@
                                         <span class=icon-bar></span></button>
                                 </div>
                                 <div class=nav-menu>
-                                    <ul class="nav navbar-nav menu-bar">
-                                        <li><a href="/">ANA SAYFA <span></span> <span></span>
-                                            <span></span> <span></span></a></li>
-                                            
-                                        <li><a  class=active href="/about">HAKKIMIZDA <span></span> <span></span> <span></span>
+                                    <ul   class="nav navbar-nav menu-bar">
+                                    
+                                        <li><a class="active">KULÜBÜMÜZ<span></span> <span></span> <span></span> <span></span></a>
+                                            <ul class=sub-menu>
+                                                <li><a href="/">ANA SAYFA</a></li>
+                                                <li><a href="/about">HAKKIMIZDA</a></li>
+                                                <li><a href="/contact">İLETİŞİM</a></li>
+                                                
+                                            </ul>
+                                        </li>
+                                        <li><a  href="/fixture">FİKSTÜR <span></span> <span></span> <span></span>
+                                            <span></span></a></li>
+                                        <li><a href="/sportsschool">SPOR OKULU <span></span> <span></span> <span></span>
                                             <span></span></a></li>
                                         <li><a>GALERİ<span></span> <span></span> <span></span> <span></span></a>
                                             <ul class=sub-menu>
@@ -48,8 +57,7 @@
                                         </li>
                                         <li><a href="/ourtechnicalstaff">TEKNİK KADROMUZ <span></span> <span></span> <span></span>
                                             <span></span></a></li>
-                                        <li><a href="/contact">İLETİŞİM <span></span> <span></span>
-                                            <span></span> <span></span></a></li>
+                                        
                                  
                                     </ul>
                                 </div>
@@ -73,9 +81,12 @@
                     {% else %}
                     {% endif %}
                      </div>
+                </div>
             </div>
         </div>
-    </header>{% endblock header %}
+    </header>
+
+{% endblock header %}
 {% block slider %}
 
 <div class=innerbannerwrap>

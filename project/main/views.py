@@ -25,6 +25,7 @@ def site_bilgileri_cek():
     sozluk["gomuluadres"] = gomulu_adres.objects.last()
     sozluk["renkler"] = site_renkleri.objects.last()
     sozluk["sponsorlar"] = sponsorlar.objects.all()
+    sozluk["spor_okulu"] = spor_okulu.objects.last()
     
     return sozluk
 def page_not_found_view(request, exception):
@@ -37,7 +38,9 @@ def homepage(request):
 def fikstur(request):
     content = site_bilgileri_cek()
     return render(request,"fikstur.html",content)
-
+def spor_okuluu(request):
+    content = site_bilgileri_cek()
+    return render(request,"sporokulu.html",content)
 def about(request):
     content = site_bilgileri_cek()
     return render(request,"about.html",content)

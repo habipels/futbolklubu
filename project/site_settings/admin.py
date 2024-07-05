@@ -76,6 +76,9 @@ class BannerAdmin(admin.ModelAdmin):
 @admin.register(hakkimizda)
 class HakkimizdaAdmin(admin.ModelAdmin):
     list_display = ('hakkimizda_tr',)
+@admin.register(spor_okulu)
+class SporOkulu(admin.ModelAdmin):
+    list_display = ('hakkimizda_tr',)
 
 @admin.register(anasayfa)
 class AnasayfaAdmin(admin.ModelAdmin):
