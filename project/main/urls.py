@@ -15,4 +15,5 @@ urlpatterns = [
     path("u12player", views.u_12_oyuncularimiz, name="u_12_oyuncularimiz"),
     path("u13player", views.u_13_oyuncularimiz, name="u_13_oyuncularimiz"),
     path("contact", views.iletisim, name="iletisim"),
+    path("contactsave", views.iletisim_kaydet, name="iletisim_kaydet"),
 ]

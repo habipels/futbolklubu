@@ -157,3 +157,13 @@ class sponsorlar(models.Model):
     class Meta:
         verbose_name = "Sponsorlarımız"
         verbose_name_plural ="Sponsorlarımız"
+
+class iletisim_al(models.Model):
+    adi_soyadi = models.CharField(max_length=200,verbose_name="Adı Soyadı",blank=True,null=True)
+    numara = models.CharField(max_length=200,verbose_name="Numarası",blank=True,null=True)
+    konu = models.CharField(max_length=200,verbose_name="konu",blank=True,null=True)
+    mesaj = models.TextField(verbose_name="Mesaj",blank=True)
+    email = models.EmailField(verbose_name="Email",blank=True)
+    class Meta:
+        verbose_name = "İletişim"
+        verbose_name_plural ="İletişim Kayıtları"

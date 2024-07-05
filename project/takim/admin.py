@@ -93,3 +93,7 @@ class u_13_oyunculariAdmin(admin.ModelAdmin, ImageAdminMixin):
 class sponsorlarimiz(admin.ModelAdmin, ImageAdminMixin):
     list_display = ('adi_soyadi', 'image_tag')
     search_fields = ('adi_soyadi',)
+@admin.register(iletisim_al)
+class iletisim_bilgileri(admin.ModelAdmin):
+    list_display = ('adi_soyadi', 'numara','konu','mesaj','email')
+    search_fields = ('adi_soyadi', 'numara','konu','mesaj','email')

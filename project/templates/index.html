@@ -125,394 +125,45 @@
     <section class="booking bg-smallwhite">
         <div class=container>
             <div class=booking-fig><h2>{{site_adi.site_adi_sekme_tr}}</h2></div>
-            <div class=booking-content><a href=# class="btn btn-white">Tarihçe</a> <a href=bookTicket.html
+            <div class=booking-content><a href="/sportsschool" class="btn btn-white">SPOR OKULU</a> <a href="/about"
                                                                                         class="btn btn-red">Hakkımızda
                 </a></div>
         </div>
     </section>
-    {% if u_11_sonkarsilasma %}
-    <section class=latestResult>
-            <div class=container>
-                <div class=row><h2 class=heading>SON <span>KARŞILAŞMA</span></h2>
-    
-                    <div class=latestResult-wrap><h4>U-11 LİGİ</h4>
-    
-                        <p></p></div>
-                    <div class="result clearfix">
-                        <div class=result-details>
-                            <div class=content><h4>{{u_11_sonkarsilasma.ev_sahibi_takim_adi}}</h4>
-    
-                                <p>{{u_11_sonkarsilasma.ev_sahibi_kazanma_kaybetme}}</p>
-    
-                                <p>{{u_11_sonkarsilasma.ev_sahibi_gol_atanlar |safe}}</p></div>
-                            <div class=figure>
-                                <div class=team-logo>
-                                    <div style=background:url({{u_11_sonkarsilasma.ev_sahibi_takim_logusu}}) class=teamLogoImg></div>
+    <section class="matchSchedule countryclub">
+    <div class=container>
+        {{anasayfa.hakkimizda_tr|safe}}
+    </div>
+</section>
+<section class=players>
+    <div class=container>
+        <div class=row><h2 class=heading>Teknik <span>Kadro</span></h2>
+
+            <p class=headParagraph>Profesyonel Teknik Kadro Ekibimiz</p>
+
+            <div class="wrapplayer clearfix"><a class="prv prev-player"></a> <a class="nxt next-player"></a>
+                <ul class="boardmember clearfix">
+                    {% for i in teknik_kadro_ekibi %}               
+                    <li class=clearfix>
+                        <div>
+                            <div>
+                                <div class=fig01>
+                                    <div class=memberimg
+                                         style="background:url({{i.fotografi.url}}) no-repeat top center"></div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class=result-count>
-                            <div class=count-number><span class=lose-team>{{u_11_sonkarsilasma.ev_sahibi_skoru}}</span> <span>-</span> <span
-                                    class=win-team>{{u_11_sonkarsilasma.deplasman_skoru}}</span></div>
-                            <div class=dateTime>
-                                <div class=dateTime-container><span class=date>{{u_11_sonkarsilasma.karsilasma_tarihi}}</span> <span
-                                        class=time></span></div>
-                                <div class=country-wrap><span class=field>{{u_11_sonkarsilasma.karsilasma_yeri}}</span> <span class=country></span>
+                                <div class="bg-black01 fig02"><h6 class=paragraph02>{{i.adi_soyadi}}</h6>
+
+                                    <p class="uppercaseheading red">{{i.gorevi}}</p></div>
+                                <div class="bg-black fig02"><p>{{i.aciklamasi|safe}}</p>
                                 </div>
+                                <div class="bg-redcolor fig02"><p>{{i.dogum_tarihi}}</p></div>
                             </div>
                         </div>
-                        <div class=result-details>
-                            <div class="content contentresult"><h4>{{u_11_sonkarsilasma.deplasman_takim_adi}}</h4>
-    
-                                <p>{{u_11_sonkarsilasma.deplasman_kazanma_kaybetme}}</p>
-    
-                                <p>{{u_11_sonkarsilasma.deplasman_gol_atanlar}}
-                                    
-                                </p></div>
-                            <div class="figure figresult">
-                                <div class=team-logo>
-                                    <div style=background:url({{u_11_sonkarsilasma.deplasman_takim_logusu}}) class=teamLogoImg></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class=center><a href=# class="btn btn-red score-btn">Skor Tablosu</a></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    {% endif %}
-{% if u_12_sonkarsilasma %}
-<section class=latestResult>
-        <div class=container>
-            <div class=row><h2 class=heading>SON <span>KARŞILAŞMA</span></h2>
-
-                <div class=latestResult-wrap><h4>U-12 LİGİ</h4>
-
-                    <p></p></div>
-                <div class="result clearfix">
-                    <div class=result-details>
-                        <div class=content><h4>{{u_12_sonkarsilasma.ev_sahibi_takim_adi}}</h4>
-
-                            <p>{{u_12_sonkarsilasma.ev_sahibi_kazanma_kaybetme}}</p>
-
-                            <p>{{u_12_sonkarsilasma.ev_sahibi_gol_atanlar |safe}}</p></div>
-                        <div class=figure>
-                            <div class=team-logo>
-                                <div style=background:url({{u_12_sonkarsilasma.ev_sahibi_takim_logusu}}) class=teamLogoImg></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class=result-count>
-                        <div class=count-number><span class=lose-team>{{u_12_sonkarsilasma.ev_sahibi_skoru}}</span> <span>-</span> <span
-                                class=win-team>{{u_12_sonkarsilasma.deplasman_skoru}}</span></div>
-                        <div class=dateTime>
-                            <div class=dateTime-container><span class=date>{{u_12_sonkarsilasma.karsilasma_tarihi}}</span> <span
-                                    class=time></span></div>
-                            <div class=country-wrap><span class=field>{{u_12_sonkarsilasma.karsilasma_yeri}}</span> <span class=country></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class=result-details>
-                        <div class="content contentresult"><h4>{{u_12_sonkarsilasma.deplasman_takim_adi}}</h4>
-
-                            <p>{{u_12_sonkarsilasma.deplasman_kazanma_kaybetme}}</p>
-
-                            <p>{{u_12_sonkarsilasma.deplasman_gol_atanlar}}
-                                
-                            </p></div>
-                        <div class="figure figresult">
-                            <div class=team-logo>
-                                <div style=background:url({{u_12_sonkarsilasma.deplasman_takim_logusu}}) class=teamLogoImg></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class=center><a href=# class="btn btn-red score-btn">Skor Tablosu</a></div>
-                </div>
+                    </li>
+                    {% endfor %}
+                </ul>
             </div>
         </div>
-    </section>
-{% endif %}
-{% if u_13_sonkarsilasma %}
-<section class=latestResult>
-        <div class=container>
-            <div class=row><h2 class=heading>SON <span>KARŞILAŞMA</span></h2>
-
-                <div class=latestResult-wrap><h4>U-13 LİGİ</h4>
-
-                    <p></p></div>
-                <div class="result clearfix">
-                    <div class=result-details>
-                        <div class=content><h4>{{u_13_sonkarsilasma.ev_sahibi_takim_adi}}</h4>
-
-                            <p>{{u_13_sonkarsilasma.ev_sahibi_kazanma_kaybetme}}</p>
-
-                            <p>{{u_13_sonkarsilasma.ev_sahibi_gol_atanlar |safe}}</p></div>
-                        <div class=figure>
-                            <div class=team-logo>
-                                <div style=background:url({{u_13_sonkarsilasma.ev_sahibi_takim_logusu}}) class=teamLogoImg></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class=result-count>
-                        <div class=count-number><span class=lose-team>{{u_13_sonkarsilasma.ev_sahibi_skoru}}</span> <span>-</span> <span
-                                class=win-team>{{u_13_sonkarsilasma.deplasman_skoru}}</span></div>
-                        <div class=dateTime>
-                            <div class=dateTime-container><span class=date>{{u_13_sonkarsilasma.karsilasma_tarihi}}</span> <span
-                                    class=time></span></div>
-                            <div class=country-wrap><span class=field>{{u_13_sonkarsilasma.karsilasma_yeri}}</span> <span class=country></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class=result-details>
-                        <div class="content contentresult"><h4>{{u_13_sonkarsilasma.deplasman_takim_adi}}</h4>
-
-                            <p>{{u_13_sonkarsilasma.deplasman_kazanma_kaybetme}}</p>
-
-                            <p>{{u_13_sonkarsilasma.deplasman_gol_atanlar}}
-                                
-                            </p></div>
-                        <div class="figure figresult">
-                            <div class=team-logo>
-                                <div style=background:url({{u_13_sonkarsilasma.deplasman_takim_logusu}}) class=teamLogoImg></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class=center><a href=# class="btn btn-red score-btn">Skor Tablosu</a></div>
-                </div>
-            </div>
-        </div>
-    </section>
-{% endif %}
-<section class=matchSchedule>
-        <div class=container>
-            <div class=row><h2 class=heading>U-11 <span>FİKSTÜRÜ</span></h2>
-
-                <p class=headParagraph></p>
-                <div class="matchSchedule_details row">
-                    <div class=match_versus-wrap>
-                        <div class=wrap_match-innerdetails>
-                            <ul class="home_tInfo scrollable">
-                                {% u_11 as u_11_takimlari %}
-                             
-                                {% for i in u_11_takimlari %}
-                                
-                                
-                                <li><a href="#">
-                                    <ul class="t_info match_info01 headline01 clearfix">
-                                        <li><img src="{{i.logo|first}}" alt=""></li>
-                                        <li>
-                                            <div class="headline01 clearfix">
-                                                
-                                            {% for k in i.takim %}
-                                            <span>{{k}}</span>
-                                            {% endfor %}
-                                            </div>
-                                            <div class="paragraph02 clearfix"><span>{{i.mac_yeri}}</span>
-                                                <span></span>
-                                            </div>
-                                        </li>
-                                        <li><img src='{{i.logo|slice:":2"|last}}' alt=""></li>
-                                    </ul>
-                                </a></li>
-                                {% endfor %}
-                            </ul>
-                        </div>
-                    </div>
-                    <div class=match_next>
-                        <div class="wrap_match_next left_triangle">
-                            <div class=left_padding><h4 class=headline03>Gelecek Karşılaşmalar U-11</h4>
-
-                                <p>U-11 Karşılaşmaları</p></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="matchSchedule_details row">
-                    <div class=match_next>
-                        <div class="wrap_match_next right-triangle">
-                            <div class=right-padding><h4 class=headline03>U-11 Puan Durumu</h4>
-
-                                <p>Puan Durumu Anlık TFF Üzerinden Gelmektedir</p></div>
-                        </div>
-                    </div>
-                    <div class=match_versus-wrap>
-                        <div class=wrap_match-innerdetails>
-                            <ul class="point_table scrollable">
-                                {% u_11_karsilasmalari as sonuc %}
-                                {% for i in sonuc %}   
-                                                         
-                                <li class=clearfix>
-                                    <div class=subPoint_table>
-                                        
-                                        <div class="headline01 smallpoint">{{i.Takim}}</div>
-                                        <div class="headline01 smallpoint"> <span>    </span></div>
-                                        <div class="headline01 smallpoint"> <span>G</span><span>{{i.Galibiyet}}</span></div>
-                                        <div class="headline01 smallpoint"><span>B</span><span>{{i.Beraberlik}}</span></div>
-                                        <div class="headline01 smallpoint row row"><span>M</span><span>{{i.Malubiyet}}</span></div>
-                                        <div class="headline01 smallpoint row row"><span>P</span><span>{{i.Puan}}</span></div>
-                                    </div>
-                                </li>
-                                {% endfor %}
-     
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class=matchSchedule>
-        <div class=container>
-            <div class=row><h2 class=heading>U-12 <span>FİKSTÜRÜ</span></h2>
-
-                <p class=headParagraph></p>
-                <div class="matchSchedule_details row">
-                    <div class=match_versus-wrap>
-                        <div class=wrap_match-innerdetails>
-                            <ul class="home_tInfo scrollable">
-                                {% u_12 as u_12_takimlari %}
-                              
-                                {% for i in u_12_takimlari %}
-                                
-                                
-                                <li><a href="#">
-                                    <ul class="t_info match_info01 headline01 clearfix">
-                                        <li><img src="{{i.logo|first}}" alt=""></li>
-                                        <li>
-                                            <div class="headline01 clearfix">
-                                                
-                                            {% for k in i.takim %}
-                                            <span>{{k}}</span>
-                                            {% endfor %}
-                                            </div>
-                                            <div class="paragraph02 clearfix"><span>{{i.mac_yeri}}</span>
-                                                <span></span>
-                                            </div>
-                                        </li>
-                                        <li><img src='{{i.logo|slice:":2"|last}}' alt=""></li>
-                                    </ul>
-                                </a></li>
-                                {% endfor %}
-                            </ul>
-                        </div>
-                    </div>
-                    <div class=match_next>
-                        <div class="wrap_match_next left_triangle">
-                            <div class=left_padding><h4 class=headline03>Gelecek Karşılaşmalar U-12</h4>
-
-                                <p>U-12 Karşılaşmaları</p></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="matchSchedule_details row">
-                    <div class=match_next>
-                        <div class="wrap_match_next right-triangle">
-                            <div class=right-padding><h4 class=headline03>U-12 Puan Durumu</h4>
-
-                                <p>Puan Durumu Anlık TFF Üzerinden Gelmektedir</p></div>
-                        </div>
-                    </div>
-                    <div class=match_versus-wrap>
-                        <div class=wrap_match-innerdetails>
-                            <ul class="point_table scrollable">
-                                {% u_12_karsilasmalari as sonuc %}
-                                {% for i in sonuc %}   
-                                                         
-                                <li class=clearfix>
-                                    <div class=subPoint_table>
-                                        
-                                        <div class="headline01 smallpoint">{{i.Takim}}</div>
-                                        <div class="headline01 smallpoint"> <span>    </span></div>
-                                        <div class="headline01 smallpoint"> <span>G</span><span>{{i.Galibiyet}}</span></div>
-                                        <div class="headline01 smallpoint"><span>B</span><span>{{i.Beraberlik}}</span></div>
-                                        <div class="headline01 smallpoint row row"><span>M</span><span>{{i.Malubiyet}}</span></div>
-                                        <div class="headline01 smallpoint row row"><span>P</span><span>{{i.Puan}}</span></div>
-                                    </div>
-                                </li>
-                                {% endfor %}
-     
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class=matchSchedule>
-        <div class=container>
-            <div class=row><h2 class=heading>U-13 <span>FİKSTÜRÜ</span></h2>
-
-                <p class=headParagraph></p>
-                <div class="matchSchedule_details row">
-                    <div class=match_versus-wrap>
-                        <div class=wrap_match-innerdetails>
-                            <ul class="home_tInfo scrollable">
-                                {% u_13 as u_13_takimlari %}
-                              
-                                {% for i in u_13_takimlari %}
-                                
-                                
-                                <li><a href="#">
-                                    <ul class="t_info match_info01 headline01 clearfix">
-                                        <li><img src="{{i.logo|first}}" alt=""></li>
-                                        <li>
-                                            <div class="headline01 clearfix">
-                                                
-                                            {% for k in i.takim %}
-                                            <span>{{k}}</span>
-                                            {% endfor %}
-                                            </div>
-                                            <div class="paragraph02 clearfix"><span>{{i.mac_yeri}}</span>
-                                                <span></span>
-                                            </div>
-                                        </li>
-                                        <li><img src='{{i.logo|slice:":2"|last}}' alt=""></li>
-                                    </ul>
-                                </a></li>
-                                {% endfor %}
-                            </ul>
-                        </div>
-                    </div>
-                    <div class=match_next>
-                        <div class="wrap_match_next left_triangle">
-                            <div class=left_padding><h4 class=headline03>Gelecek Karşılaşmalar U-13</h4>
-
-                                <p>U-13 Karşılaşmaları</p></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="matchSchedule_details row">
-                    <div class=match_next>
-                        <div class="wrap_match_next right-triangle">
-                            <div class=right-padding><h4 class=headline03>U-13 Puan Durumu</h4>
-
-                                <p>Puan Durumu Anlık TFF Üzerinden Gelmektedir</p></div>
-                        </div>
-                    </div>
-                    <div class=match_versus-wrap>
-                        <div class=wrap_match-innerdetails>
-                            <ul class="point_table scrollable">
-                                {% u_13_karsilasmalari as sonuc %}
-                                {% for i in sonuc %}   
-                                                         
-                                <li class=clearfix>
-                                    <div class=subPoint_table>
-                                        
-                                        <div class="headline01 smallpoint">{{i.Takim}}</div>
-                                        <div class="headline01 smallpoint"> <span>    </span></div>
-                                        <div class="headline01 smallpoint"> <span>G</span><span>{{i.Galibiyet}}</span></div>
-                                        <div class="headline01 smallpoint"><span>B</span><span>{{i.Beraberlik}}</span></div>
-                                        <div class="headline01 smallpoint row row"><span>M</span><span>{{i.Malubiyet}}</span></div>
-                                        <div class="headline01 smallpoint row row"><span>P</span><span>{{i.Puan}}</span></div>
-                                    </div>
-                                </li>
-                                {% endfor %}
-     
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    </div>
+</section>
 {% endblock slider %}

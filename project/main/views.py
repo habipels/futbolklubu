@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from django.http import HttpResponse
 from site_settings.models import *
 from takim.models import *
@@ -11,6 +11,7 @@ def site_bilgileri_cek():
     sozluk["u_12_sonkarsilasma"] = u_12_takimi_son_karsilasma.objects.last()
     sozluk["u_13_sonkarsilasma"] = u_13_takimi_son_karsilasma.objects.last()
     sozluk ["hakkimizda"] = hakkimizda.objects.last()
+    sozluk ["anasayfa"] = anasayfa.objects.last()
     sozluk["teknik_kadro_ekibi"] = teknik_kadro_ekibi.objects.all()
     sozluk["site_adi"] = site_adi.objects.last()
     sozluk["numara"] = numara.objects.last()
@@ -83,3 +84,12 @@ def u_13_oyuncularimiz(request):
 def iletisim(request):
     content = site_bilgileri_cek()
     return render(request,"iletisim.html",content)
+def iletisim_kaydet(request):
+    if request.POST:
+        isim = request.POST.get("name")
+        phone = request.POST.get("phone")
+        subject = request.POST.get("subject")
+        email = request.POST.get("email")
+        comment = request.POST.get("comment")
+        iletisim_al.objects.create(adi_soyadi =isim,numara = phone,konu = subject,mesaj = comment,email = email)
+    return redirect("/")
