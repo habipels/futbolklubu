@@ -11,6 +11,50 @@
   --renkuc: {{renkler.renkuc}};
   --renkdort: {{renkler.renkdort}};
 }
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.carousel-item img {
+    width: 100%;
+    display: block;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#prevBtn {
+    left: 10px;
+}
+
+#nextBtn {
+    right: 10px;
+}
+
     </style>
     <meta charset=utf-8>
     {% if seo_ayarlari %}
@@ -80,6 +124,18 @@
 
 {% endblock sidebar %}
 {% block footer %}
+<div style="margin-left: 5%; margin-right: 5%;" class="div">
+<div class="carousel-container">
+    <button id="prevBtn" class="carousel-btn">←</button>
+    <div class="carousel" style="margin-left: 7%; margin-right: 7%;">
+        {% for i in sponsorlar %}
+        <div class="carousel-item"><img style="max-width: 100px; max-height: 100px; min-height: 100px; min-width: 100px;" src="{{i.fotografi.url}}" alt="{{i.adi_soyadi}}"></div>
+        {% endfor %}
+        <!-- Daha fazla sponsor ekleyebilirsiniz -->
+    </div>
+    <button id="nextBtn" class="carousel-btn">→</button>
+</div>
+</div>
  <footer class=footer-type01>
         <div class=container>
             <div class=row>
@@ -151,7 +207,45 @@
 {% endblock footer %}
 </div>
 {% block javascript %}
+<script>
+    const carousel = document.querySelector('.carousel');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
 
+let currentIndex = 0;
+
+function updateCarousel() {
+    const width = carousel.clientWidth;
+    carousel.style.transform = `translateX(${-width * currentIndex}px)`;
+}
+
+function showNextSlide() {
+    currentIndex = (currentIndex < carousel.children.length - 1) ? currentIndex + 1 : 0;
+    updateCarousel();
+}
+
+prevBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex > 0) ? currentIndex - 1 : carousel.children.length - 1;
+    updateCarousel();
+    resetAutoSlide();
+});
+
+nextBtn.addEventListener('click', () => {
+    showNextSlide();
+    resetAutoSlide();
+});
+
+let autoSlideInterval = setInterval(showNextSlide, 3000);
+
+function resetAutoSlide() {
+    clearInterval(autoSlideInterval);
+    autoSlideInterval = setInterval(showNextSlide, 3000);
+}
+
+window.addEventListener('resize', updateCarousel);
+
+
+</script>
 <script src="{% static 'js/vendor/vendor.js' %}"></script>
 <script src="{% static 'js/main.js' %}"></script>
 {% endblock javascript %}
