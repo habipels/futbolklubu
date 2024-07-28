@@ -1,0 +1,131 @@
+{% extends "homebase.html" %}
+{% load custom_tags %}
+{% load static %}
+{% block header %}
+
+<header class=header-main>
+        <div class=header-upper>
+            <div class=container>
+                <div class=row>
+                    <ul>
+                        <li><a href="/">{{site_adi.site_adi_sekme_tr}}</a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="header-lower clearfix">
+            <div class=container>
+                <div class=row><h1 class=logo><a href="/"><img src="{{logo.image.url}}" alt=image></a></h1>
+
+                    <div class=menubar>
+                        <nav class=navbar>
+                            <div class=nav-wrapper>
+                                <div class=navbar-header>
+                                    <button type=button class=navbar-toggle><span class=sr-only>Toggle navigation</span>
+                                        <span class=icon-bar></span></button>
+                                </div>
+                                <div class=nav-menu>
+                                    <ul   class="nav navbar-nav menu-bar">
+                                    
+                                        <li><a class="active">KULÜBÜMÜZ<span></span> <span></span> <span></span> <span></span></a>
+                                            <ul class=sub-menu>
+                                                <li><a href="/">ANA SAYFA</a></li>
+                                                <li><a href="/manager">YÖNETİM KURULU</a></li>
+                                                <li><a href="/awards">KUPALAR</a></li>
+                                                <li><a href="/sponsors">SPONSORLAR</a></li>          
+                                                <li><a href="/about">HAKKIMIZDA</a></li>
+                                                <li><a href="/contact">İLETİŞİM</a></li>
+                                                
+                                            </ul>
+                                        </li>
+                                        <li><a  href="/fixture">FİKSTÜR <span></span> <span></span> <span></span>
+                                            <span></span></a></li>
+                                        <li><a href="/sportsschool">Futbol Okulu <span></span> <span></span> <span></span>
+                                            <span></span></a></li>
+                                        <li><a>GALERİ<span></span> <span></span> <span></span> <span></span></a>
+                                            <ul class=sub-menu>
+                                                <li><a href="/galery">FORMALARIMIZ</a></li>
+                                                <li><a href="/u11galery">U-11 TAKIMIMIZ</a></li>
+                                                <li><a href="/u12galery">U-12 TAKIMIMIZ</a></li>
+                                                <li><a href="/u13galery">U-13 TAKIMIMIZ</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a>OYUNCULARIMIZ<span></span> <span></span> <span></span> <span></span></a>
+                                            <ul class=sub-menu>
+                                                <li><a href="/u11player">U-11 TAKIMIMIZ</a></li>
+                                                <li><a href="/u12player">U-12 TAKIMIMIZ</a></li>
+                                                <li><a href="/u13player">U-13 TAKIMIMIZ</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a  href="/ourtechnicalstaff">TEKNİK KADROMUZ <span></span> <span></span> <span></span>
+                                            <span></span></a></li>
+                                        
+                                 
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class=social>
+                    {% if email_adres %}
+                             <a href="mailto:{{email_adres.sirket_email_adresi}}" class=facebook><i
+                            class="fa fa-google"></i></a> 
+                        {% else %}
+                        {% endif %}
+                    {% if sosyalmedyatw.link %}
+                        <a href="{{sosyalmedyatw.link}}" class=twitter><i
+                            class="fa fa-twitter"></i></a>
+                    {% else %}
+                    {% endif %}
+                    {% if sosyalmedyaInsgr.link %}
+                       <a href="{{sosyalmedyaInsgr.link}}" class=behance><i
+                            class="fa fa-instagram"></i></a>
+                    {% else %}
+                    {% endif %}
+                     </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+{% endblock header %}{% block slider %}
+
+<div class=innerbannerwrap>
+    <div class=innerbanner><h2 class=bannerHeadline>KUPA<span>LARIMIZ</span></h2></div>
+</div>
+<section class="club_history achivementwrapper bg-white">
+    <div class=container>
+        <div class=row>
+
+            <div class=wrap-achive>
+                <ul class=achievement>
+                    {% for i in kupalar %}
+                    
+                   
+                    <li class=clearfix>
+                        <div class=fig><img src={{i.fotografi.url}} alt=image>
+
+                            <div>{{i.adi_soyadi}}</div>
+                        </div>
+                        <div class=figcontentachv><h5 class="headline01 red">{{i.adi_soyadi}}</h5>
+
+                            <p>{{i.aciklamasi |safe}}</p>
+
+                            <div class="blog-detailsfooter achvfooter clearfix">
+                            
+                                <div class=blog-detailsfooter02><p class=uppercaseheading>{{i.dogum_tarihi}}</p></div>
+                            </div>
+                        </div>
+                    </li>
+                    {% endfor %}
+                    
+            </div>
+        </div>
+    </div>
+</section>
+
+</section>
+
+
+{% endblock slider %}

@@ -167,3 +167,23 @@ class iletisim_al(models.Model):
     class Meta:
         verbose_name = "İletişim"
         verbose_name_plural ="İletişim Kayıtları"
+
+class yonetim_klubu_ekibi(models.Model):
+    adi_soyadi = models.CharField(max_length=200,verbose_name=" Adı Soyadi",blank=True,null=True)
+    dogum_tarihi = models.CharField(max_length=200,verbose_name="Doğum Tarihi",blank=True,null=True)
+    gorevi = models.CharField(max_length=200,verbose_name="Görevi",blank=True,null=True)
+    aciklamasi = models.TextField(verbose_name="Açıklaması",blank=True)
+    fotografi = models.ImageField(upload_to='yonetim/',verbose_name="Teknik Kadro")
+    class Meta:
+        verbose_name = "Yönetim KULÜBÜMÜZ"
+        verbose_name_plural ="Yönetim KULÜBÜMÜZ"
+
+
+class kupalarimiz(models.Model):
+    adi_soyadi = models.CharField(max_length=200,verbose_name=" Adı ",blank=True,null=True)
+    dogum_tarihi = models.CharField(max_length=200,verbose_name=" Tarihi",blank=True,null=True)
+    aciklamasi = models.TextField(verbose_name="Açıklaması",blank=True)
+    fotografi = models.ImageField(upload_to='kupalarimiz/',verbose_name="Teknik Kadro")
+    class Meta:
+        verbose_name = "KUPALARIMIZ"
+        verbose_name_plural ="KUPALARIMIZ"

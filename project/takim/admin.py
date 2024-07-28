@@ -97,3 +97,13 @@ class sponsorlarimiz(admin.ModelAdmin, ImageAdminMixin):
 class iletisim_bilgileri(admin.ModelAdmin):
     list_display = ('adi_soyadi', 'numara','konu','mesaj','email')
     search_fields = ('adi_soyadi', 'numara','konu','mesaj','email')
+
+@admin.register(yonetim_klubu_ekibi)
+class yonetim_klubu_ekibiAdmin(admin.ModelAdmin, ImageAdminMixin):
+    list_display = ('adi_soyadi', 'dogum_tarihi', 'gorevi', 'image_tag')
+    search_fields = ('adi_soyadi', 'dogum_tarihi', 'gorevi')
+
+@admin.register(kupalarimiz)
+class kupalarimizAdmin(admin.ModelAdmin, ImageAdminMixin):
+    list_display = ('adi_soyadi', 'dogum_tarihi', 'image_tag')
+    search_fields = ('adi_soyadi', 'dogum_tarihi')

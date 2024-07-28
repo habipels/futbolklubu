@@ -27,7 +27,8 @@ def site_bilgileri_cek():
     sozluk["renkler"] = site_renkleri.objects.last()
     sozluk["sponsorlar"] = sponsorlar.objects.all()
     sozluk["spor_okulu"] = spor_okulu.objects.last()
-    
+    sozluk["teknik_kadro_ekibii"] = yonetim_klubu_ekibi.objects.all()
+    sozluk["kupalar"] = kupalarimiz.objects.all()
     return sozluk
 def page_not_found_view(request, exception):
     content = site_bilgileri_cek()
@@ -93,3 +94,13 @@ def iletisim_kaydet(request):
         comment = request.POST.get("comment")
         iletisim_al.objects.create(adi_soyadi =isim,numara = phone,konu = subject,mesaj = comment,email = email)
     return redirect("/")
+
+def kupalar(request):
+    content = site_bilgileri_cek()
+    return render(request,"kupalar.html",content)
+def yonetim_ekibi(request):
+    content = site_bilgileri_cek()
+    return render(request,"yonetim.html",content)
+def sponsorluklar(request):
+    content = site_bilgileri_cek()
+    return render(request,"sponsorluk.html",content)
