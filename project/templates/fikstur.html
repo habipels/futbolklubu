@@ -49,6 +49,8 @@
                                                 <li><a href="/u11galery">U-11 TAKIMIMIZ</a></li>
                                                 <li><a href="/u12galery">U-12 TAKIMIMIZ</a></li>
                                                 <li><a href="/u13galery">U-13 TAKIMIMIZ</a></li>
+                                                <li><a href="/u14galery">U-14 TAKIMIMIZ</a></li>
+                                                <li><a href="/u15galery">U-15 TAKIMIMIZ</a></li>
                                             </ul>
                                         </li>
                                         <li><a>OYUNCULARIMIZ<span></span> <span></span> <span></span> <span></span></a>
@@ -56,6 +58,8 @@
                                                 <li><a href="/u11player">U-11 TAKIMIMIZ</a></li>
                                                 <li><a href="/u12player">U-12 TAKIMIMIZ</a></li>
                                                 <li><a href="/u13player">U-13 TAKIMIMIZ</a></li>
+                                                <li><a href="/u14player">U-14 TAKIMIMIZ</a></li>
+                                                <li><a href="/u15player">U-15 TAKIMIMIZ</a></li>
                                             </ul>
                                         </li>
                                         <li><a href="/ourtechnicalstaff">TEKNİK KADROMUZ <span></span> <span></span> <span></span>
@@ -250,6 +254,109 @@
         </div>
     </section>
 {% endif %}
+{% if u_14_sonkarsilasma %}
+<section class=latestResult>
+        <div class=container>
+            <div class=row><h2 class=heading>SON <span>KARŞILAŞMA</span></h2>
+
+                <div class=latestResult-wrap><h4>U-14 LİGİ</h4>
+
+                    <p></p></div>
+                <div class="result clearfix">
+                    <div class=result-details>
+                        <div class=content><h4>{{u_14_sonkarsilasma.ev_sahibi_takim_adi}}</h4>
+
+                            <p>{{u_14_sonkarsilasma.ev_sahibi_kazanma_kaybetme}}</p>
+
+                            <p>{{u_14_sonkarsilasma.ev_sahibi_gol_atanlar |safe}}</p></div>
+                        <div class=figure>
+                            <div class=team-logo>
+                                <div style=background:url({{u_14_sonkarsilasma.ev_sahibi_takim_logusu}}) class=teamLogoImg></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=result-count>
+                        <div class=count-number><span class=lose-team>{{u_14_sonkarsilasma.ev_sahibi_skoru}}</span> <span>-</span> <span
+                                class=win-team>{{u_14_sonkarsilasma.deplasman_skoru}}</span></div>
+                        <div class=dateTime>
+                            <div class=dateTime-container><span class=date>{{u_14_sonkarsilasma.karsilasma_tarihi}}</span> <span
+                                    class=time></span></div>
+                            <div class=country-wrap><span class=field>{{u_14_sonkarsilasma.karsilasma_yeri}}</span> <span class=country></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=result-details>
+                        <div class="content contentresult"><h4>{{u_14_sonkarsilasma.deplasman_takim_adi}}</h4>
+
+                            <p>{{u_14_sonkarsilasma.deplasman_kazanma_kaybetme}}</p>
+
+                            <p>{{u_14_sonkarsilasma.deplasman_gol_atanlar}}
+                                
+                            </p></div>
+                        <div class="figure figresult">
+                            <div class=team-logo>
+                                <div style=background:url({{u_14_sonkarsilasma.deplasman_takim_logusu}}) class=teamLogoImg></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=center><a href=# class="btn btn-red score-btn">Skor Tablosu</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endif %}
+{% if u_15_sonkarsilasma %}
+<section class=latestResult>
+        <div class=container>
+            <div class=row><h2 class=heading>SON <span>KARŞILAŞMA</span></h2>
+
+                <div class=latestResult-wrap><h4>U-15 LİGİ</h4>
+
+                    <p></p></div>
+                <div class="result clearfix">
+                    <div class=result-details>
+                        <div class=content><h4>{{u_15_sonkarsilasma.ev_sahibi_takim_adi}}</h4>
+
+                            <p>{{u_15_sonkarsilasma.ev_sahibi_kazanma_kaybetme}}</p>
+
+                            <p>{{u_15_sonkarsilasma.ev_sahibi_gol_atanlar |safe}}</p></div>
+                        <div class=figure>
+                            <div class=team-logo>
+                                <div style=background:url({{u_15_sonkarsilasma.ev_sahibi_takim_logusu}}) class=teamLogoImg></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=result-count>
+                        <div class=count-number><span class=lose-team>{{u_15_sonkarsilasma.ev_sahibi_skoru}}</span> <span>-</span> <span
+                                class=win-team>{{u_15_sonkarsilasma.deplasman_skoru}}</span></div>
+                        <div class=dateTime>
+                            <div class=dateTime-container><span class=date>{{u_15_sonkarsilasma.karsilasma_tarihi}}</span> <span
+                                    class=time></span></div>
+                            <div class=country-wrap><span class=field>{{u_15_sonkarsilasma.karsilasma_yeri}}</span> <span class=country></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=result-details>
+                        <div class="content contentresult"><h4>{{u_15_sonkarsilasma.deplasman_takim_adi}}</h4>
+
+                            <p>{{u_15_sonkarsilasma.deplasman_kazanma_kaybetme}}</p>
+
+                            <p>{{u_15_sonkarsilasma.deplasman_gol_atanlar}}
+                                
+                            </p></div>
+                        <div class="figure figresult">
+                            <div class=team-logo>
+                                <div style=background:url({{u_15_sonkarsilasma.deplasman_takim_logusu}}) class=teamLogoImg></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=center><a href=# class="btn btn-red score-btn">Skor Tablosu</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endif %}
+
 <section class=matchSchedule>
         <div class=container>
             <div class=row><h2 class=heading>U-11 <span>FİKSTÜRÜ</span></h2>

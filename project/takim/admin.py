@@ -33,6 +33,16 @@ class u_13_takimi_son_karsilasmaAdmin(admin.ModelAdmin, ImageAdminMixin):
     list_display = ('ev_sahibi_takim_adi', 'deplasman_takim_adi', 'karsilasma_tarihi', 'file_tag')
     search_fields = ('ev_sahibi_takim_adi', 'deplasman_takim_adi', 'karsilasma_tarihi')
 
+@admin.register(u_14_takimi_son_karsilasma)
+class u_14_takimi_son_karsilasmaAdmin(admin.ModelAdmin, ImageAdminMixin):
+    list_display = ('ev_sahibi_takim_adi', 'deplasman_takim_adi', 'karsilasma_tarihi', 'file_tag')
+    search_fields = ('ev_sahibi_takim_adi', 'deplasman_takim_adi', 'karsilasma_tarihi')
+
+@admin.register(u_15_takimi_son_karsilasma)
+class u_15_takimi_son_karsilasmaAdmin(admin.ModelAdmin, ImageAdminMixin):
+    list_display = ('ev_sahibi_takim_adi', 'deplasman_takim_adi', 'karsilasma_tarihi', 'file_tag')
+    search_fields = ('ev_sahibi_takim_adi', 'deplasman_takim_adi', 'karsilasma_tarihi')
+
 @admin.register(u_11_skor_sayfasi)
 class u_11_skor_sayfasiAdmin(admin.ModelAdmin):
     list_display = ('url_bilgisi',)
@@ -47,7 +57,14 @@ class u_12_skor_sayfasiAdmin(admin.ModelAdmin):
 class u_13_skor_sayfasiAdmin(admin.ModelAdmin):
     list_display = ('url_bilgisi',)
     search_fields = ('url_bilgisi',)
-
+@admin.register(u_14_skor_sayfasi)
+class u_14_skor_sayfasiAdmin(admin.ModelAdmin):
+    list_display = ('url_bilgisi',)
+    search_fields = ('url_bilgisi',)
+@admin.register(u_15_skor_sayfasi)
+class u_15_skor_sayfasiAdmin(admin.ModelAdmin):
+    list_display = ('url_bilgisi',)
+    search_fields = ('url_bilgisi',)
 @admin.register(teknik_kadro_ekibi)
 class teknik_kadro_ekibiAdmin(admin.ModelAdmin, ImageAdminMixin):
     list_display = ('adi_soyadi', 'dogum_tarihi', 'gorevi', 'image_tag')
@@ -72,7 +89,14 @@ class u_12_fotograflariAdmin(admin.ModelAdmin, ImageAdminMixin):
 class u_13_fotograflariAdmin(admin.ModelAdmin, ImageAdminMixin):
     list_display = ('baslik', 'aciklamasi', 'image_tag')
     search_fields = ('baslik', 'aciklamasi')
-
+@admin.register(u_14_fotograflari)
+class u_14_fotograflariAdmin(admin.ModelAdmin, ImageAdminMixin):
+    list_display = ('baslik', 'aciklamasi', 'image_tag')
+    search_fields = ('baslik', 'aciklamasi')
+@admin.register(u_15_fotograflari)
+class u_15_fotograflariAdmin(admin.ModelAdmin, ImageAdminMixin):
+    list_display = ('baslik', 'aciklamasi', 'image_tag')
+    search_fields = ('baslik', 'aciklamasi')
 @admin.register(u_11_oyunculari)
 class u_11_oyunculariAdmin(admin.ModelAdmin, ImageAdminMixin):
     list_display = ('adi_soyadi', 'forma_numarasi', 'boyu', 'kilosu', 'dogum_tarihi', 'mevki', 'hobisi', 'aciklamasi', 'image_tag')
@@ -87,6 +111,16 @@ class u_12_oyunculariAdmin(admin.ModelAdmin, ImageAdminMixin):
 class u_13_oyunculariAdmin(admin.ModelAdmin, ImageAdminMixin):
     list_display = ('adi_soyadi', 'forma_numarasi', 'boyu', 'kilosu', 'dogum_tarihi', 'mevki', 'hobisi', 'aciklamasi', 'image_tag')
     search_fields = ('adi_soyadi', 'forma_numarasi', 'mevki')
+
+@admin.register(u_14_oyunculari)
+class u_14_oyunculariAdmin(admin.ModelAdmin, ImageAdminMixin):
+    list_display = ('adi_soyadi', 'forma_numarasi', 'boyu', 'kilosu', 'dogum_tarihi', 'mevki', 'hobisi', 'aciklamasi', 'image_tag')
+    search_fields = ('adi_soyadi', 'forma_numarasi', 'mevki')
+@admin.register(u_15_oyunculari)
+class u_15_oyunculariAdmin(admin.ModelAdmin, ImageAdminMixin):
+    list_display = ('adi_soyadi', 'forma_numarasi', 'boyu', 'kilosu', 'dogum_tarihi', 'mevki', 'hobisi', 'aciklamasi', 'image_tag')
+    search_fields = ('adi_soyadi', 'forma_numarasi', 'mevki')
+
 
 
 @admin.register(sponsorlar)
